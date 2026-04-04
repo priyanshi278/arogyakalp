@@ -14,7 +14,11 @@ ner_pipeline = pipeline(
 class NERRequest(BaseModel):
     text: str
 
+class DrugEntity(BaseModel):
+    original: str
+    generic: str
+
 class NERResponse(BaseModel):
-    drugs: List[str]
+    drugs: List[DrugEntity]
     diseases: List[str]
     allergies: List[str]

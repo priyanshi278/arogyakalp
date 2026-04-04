@@ -1,5 +1,6 @@
 from app.utils.preprocessing import preprocess_text
-from app.models.ner_model import NERResponse, ner_pipeline
+from app.models.ner_model import NERResponse, DrugEntity, ner_pipeline
+from app.utils.drug_mapper import normalize_drug_name
 from typing import List
 
 class NERService:
@@ -25,6 +26,9 @@ class NERService:
         diseases = []
         allergies = []
         
+        # We'll use a set to keep track of added drug originals to avoid duplicates
+        added_drugs = set()
+        
         # Categorize results
         # Mapping logic:
         # DRUG -> drugs
@@ -38,8 +42,10 @@ class NERService:
                 continue
                 
             if label == "DRUG":
-                if word not in drugs:
-                    drugs.append(word)
+                if word not in added_drugs:
+                    generic_name = normalize_drug_name(word)
+                    drugs.append(DrugEntity(original=word, generic=generic_name))
+                    added_drugs.add(word)
             elif label == "DISEASE" or label == "DISORDER":
                 if word not in diseases:
                     diseases.append(word)

@@ -31,7 +31,7 @@ class ADRModel:
         
         # Using multi_class='ovr' or 'multinomial' for LogisticRegression
         # Given the small dataset, LogisticRegression with high C or default should work
-        self.model = LogisticRegression(multi_class='multinomial', solver='lbfgs', max_iter=1000)
+        self.model = LogisticRegression( solver='lbfgs', max_iter=1000)
         self.model.fit(X, y)
         
         # Keep track of known drugs

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "text": "Patient is taking Dolo 650 for fever and has allergy to penicillin"
+  },
+  {
+    "id": 2,
+    "text": "Prescribed ibuprofen for chronic back pain. No known allergies."
+  },
+  {
+    "id": 3,
+    "text": "Diagnosed with diabetes. Starting metformin for blood sugar control."
+  },
+  {
+    "id": 4,
+    "text": "History of asthma. Uses albuterol inhaler. Allergic to peanuts."
+  },
+  {
+    "id": 5,
+    "text": "Fever and cough symptoms. Taking paracetamol regularly."
+  },
+  {
+    "id": 6,
+    "text": "Hypertension patient currently on amoxicillin for ear infection."
+  },
+  {
+    "id": 7,
+    "text": "Severe allergic reaction to eggs. Avoid vaccines containing egg protein."
+  },
+  {
+    "id": 8,
+    "text": "Patient with flu symptoms. Recommended aspirin for headache."
+  },
+  {
+    "id": 9,
+    "text": "Chronic cough and shortness of breath. Allergy to pollen and dust."
+  },
+  {
+    "id": 10,
+    "text": "Taking soy-based supplements. Allergic to soy."
+  }
+]

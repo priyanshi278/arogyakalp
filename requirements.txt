@@ -4,3 +4,5 @@ pydantic
 transformers
 torch
 sentencepiece
+pandas
+scikit-learn

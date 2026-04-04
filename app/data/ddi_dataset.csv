@@ -1,0 +1,31 @@
+drug_1,drug_2,interaction
+paracetamol,ibuprofen,safe
+paracetamol,amoxicillin,safe
+paracetamol,metformin,safe
+paracetamol,aspirin,safe
+ibuprofen,amoxicillin,caution
+ibuprofen,aspirin,risky
+ibuprofen,warfarin,dangerous
+amoxicillin,warfarin,dangerous
+amoxicillin,methotrexate,dangerous
+aspirin,warfarin,dangerous
+aspirin,clopidogrel,dangerous
+metformin,furosemide,caution
+metformin,contrast,dangerous
+albuterol,propranolol,risky
+albuterol,atenolol,risky
+amoxicillin,clavulanic acid,safe
+paracetamol,alcohol,dangerous
+ibuprofen,naproxen,risky
+aspirin,ibuprofen,risky
+metformin,insulin,caution
+lisinopril,spironolactone,caution
+lisinopril,ibuprofen,caution
+lisinopril,aspirin,risky
+warfarin,vitamin k,dangerous
+warfarin,ibuprofen,dangerous
+amoxicillin,probenecid,caution
+paracetamol,caffeine,safe
+ibuprofen,prednisone,dangerous
+aspirin,prednisone,dangerous
+amoxicillin,birth control,caution

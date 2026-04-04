@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import List
+from typing import List, Optional
 from transformers import pipeline
 
 # Load pretrained biomedical NER pipeline once
@@ -18,7 +18,17 @@ class DrugEntity(BaseModel):
     original: str
     generic: str
 
+class ADRPrediction(BaseModel):
+    drug: str
+    side_effects: List[str]
+
+class DrugInteraction(BaseModel):
+    drug_pair: List[str]
+    interaction: str
+
 class NERResponse(BaseModel):
     drugs: List[DrugEntity]
     diseases: List[str]
     allergies: List[str]
+    adr_predictions: List[ADRPrediction] = []
+    drug_interactions: List[DrugInteraction] = []

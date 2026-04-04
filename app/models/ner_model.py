@@ -26,9 +26,15 @@ class DrugInteraction(BaseModel):
     drug_pair: List[str]
     interaction: str
 
+class Recommendation(BaseModel):
+    drug: str
+    issue: str
+    alternative: str
+
 class NERResponse(BaseModel):
     drugs: List[DrugEntity]
     diseases: List[str]
     allergies: List[str]
     adr_predictions: List[ADRPrediction] = []
     drug_interactions: List[DrugInteraction] = []
+    recommendations: List[Recommendation] = []

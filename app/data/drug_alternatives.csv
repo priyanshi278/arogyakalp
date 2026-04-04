@@ -1,0 +1,32 @@
+drug_name,alternative,condition
+paracetamol,ibuprofen,fever
+ibuprofen,acetaminophen,pain
+amoxicillin,azithromycin,infection
+aspirin,clopidogrel,heart
+clopidogrel,aspirin,heart
+acetaminophen,paracetamol,fever
+azithromycin,amoxicillin,infection
+lipitor,simvastatin,cholesterol
+simvastatin,lipitor,cholesterol
+metformin,glipizide,diabetes
+glipizide,metformin,diabetes
+lisinopril,amlodipine,hypertension
+amlodipine,lisinopril,hypertension
+albuterol,levalbuterol,asthma
+levalbuterol,albuterol,asthma
+omeprazole,pantoprazole,acid reflux
+pantoprazole,omeprazole,acid reflux
+sertraline,fluoxetine,depression
+fluoxetine,sertraline,depression
+warfarin,apixaban,blood clot
+apixaban,warfarin,blood clot
+losartan,valsartan,hypertension
+valsartan,losartan,hypertension
+gabapentin,pregabalin,nerve pain
+pregabalin,gabapentin,nerve pain
+prednisone,methylprednisolone,inflammation
+methylprednisolone,prednisone,inflammation
+furosemide,spironolactone,edema
+spironolactone,furosemide,edema
+hydrochlorothiazide,chlorthalidone,hypertension
+chlorthalidone,hydrochlorothiazide,hypertension

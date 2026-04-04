@@ -3,6 +3,7 @@ from app.models.ner_model import NERResponse, DrugEntity, ADRPrediction, DrugInt
 from app.utils.drug_mapper import normalize_drug_name
 from app.services.adr_service import adr_service
 from app.services.ddi_service import ddi_service
+from app.services.recommendation_service import recommendation_service
 from typing import List
 
 class NERService:
@@ -82,5 +83,6 @@ class NERService:
             diseases=diseases,
             allergies=allergies,
             adr_predictions=adr_predictions,
-            drug_interactions=drug_interactions
+            drug_interactions=drug_interactions,
+            recommendations=recommendation_service.get_recommendations(drugs, adr_predictions, drug_interactions)
         )

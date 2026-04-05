@@ -36,19 +36,15 @@ class NERService:
         # Keep a list of all generic names for DDI checking
         generic_drug_names = []
         
-        # Categorize results
-        # Mapping logic:
-        # DRUG -> drugs
-        # DISEASE -> diseases
-        # CHEMICAL / ALLERGEN -> allergies
+        # Map labels from d4data/biomedical-ner-all
         for entity in results:
             label = entity.get("entity_group", "")
             word = entity.get("word", "").strip()
             
             if not word:
                 continue
-                
-            if label == "DRUG":
+            
+            if label in ["Medication", "DRUG", "CHEMICAL"]:
                 if word not in added_drugs:
                     generic_name = normalize_drug_name(word)
                     drugs.append(DrugEntity(original=word, generic=generic_name))
@@ -56,15 +52,14 @@ class NERService:
                     generic_drug_names.append(generic_name)
                     
                     # Predict ADR for each drug found
-                    # Use generic name for better prediction consistency
                     side_effects = adr_service.predict_adr(generic_name)
                     if side_effects:
                         adr_predictions.append(ADRPrediction(drug=word, side_effects=side_effects))
                         
-            elif label == "DISEASE" or label == "DISORDER":
+            elif label in ["Disease_disorder", "Sign_symptom", "DISEASE", "DISORDER"]:
                 if word not in diseases:
                     diseases.append(word)
-            elif label == "CHEMICAL" or label == "ALLERGEN":
+            elif label in ["Biological_structure", "ALLERGEN"]:
                 if word not in allergies:
                     allergies.append(word)
         

@@ -1,16 +1,17 @@
-# ArogyaKalp - AI Healthcare System
+# ArogyaKalp - AI-Powered Healthcare Assistant
 
-ArogyaKalp is an AI-powered healthcare assistant designed to extract clinical insights from medical notes. This repository contains the initial phase of the system, focusing on modular architecture and basic Named Entity Recognition (NER).
+ArogyaKalp is a comprehensive clinical decision support system (CDSS) designed to enhance patient safety by analyzing medical notes for potential risks. The system leverages Named Entity Recognition (NER), Adverse Drug Reaction (ADR) prediction, Drug-Drug Interaction (DDI) detection, and provides safer medication recommendations through an intuitive chatbot interface.
 
-## 🚀 Phase 1: NER Module (Initial Implementation)
+---
 
-In this phase, we have established a robust, modular backend foundation using FastAPI. The NER logic currently uses high-performance keyword matching as a "dummy" placeholder, ready for future machine learning model integration.
+## ✨ Key Features
 
-### ✨ Key Features
-- **Modular Clean Architecture**: Separated concerns into API, Services, Models, and Utils.
-- **Entity Extraction**: Detects Drugs, Diseases, and Allergies from clinical text.
-- **Text Preprocessing**: Automated lowercasing and punctuation removal for better accuracy.
-- **FastAPI Framework**: High-performance, asynchronous API endpoints with auto-generated documentation.
+- **Entity Extraction (NER)**: Automatically identifies Drugs, Diseases, and Allergies from clinical text.
+- **ADR Prediction**: Predicts potential side effects for identified medications.
+- **DDI Detection**: Identifies dangerous interactions between multiple prescribed drugs.
+- **Smart Recommendations**: Suggests safer alternatives when clinical risks are detected.
+- **Interactive Chatbot**: A natural language interface for healthcare providers to query patient data and receive safety alerts.
+- **Modern Frontend**: A responsive, high-performance dashboard built with React and Vite.
 
 ---
 
@@ -18,21 +19,25 @@ In this phase, we have established a robust, modular backend foundation using Fa
 
 ```text
 arogyakalp/
-├── app/
-│   ├── main.py                # Fast API application entry point
-│   ├── api/
-│   │   └── routes.py          # API route definitions (endpoints)
-│   ├── services/
-│   │   └── ner_service.py     # Core NER logic (Keyword matching)
-│   ├── models/
-│   │   └── ner_model.py       # Pydantic data models (validation)
-│   ├── utils/
-│   │   └── preprocessing.py   # Text cleaning utilities
-│   └── data/
-│       └── sample_clinical_notes.json  # Sample dataset for testing
-├── venv/                      # Virtual environment
-├── requirements.txt            # Project dependencies
-├── test_ner.py                 # Automated test script
+├── app/                        # Backend (FastAPI)
+│   ├── main.py                 # Application entry point
+│   ├── api/                    # API route definitions
+│   │   ├── routes.py           # Core extraction endpoints
+│   │   └── chatbot_routes.py   # NLP chatbot endpoints
+│   ├── services/               # Business logic
+│   │   ├── ner_service.py      # NER & Pipeline Orchestration
+│   │   ├── adr_service.py      # ADR Prediction
+│   │   ├── ddi_service.py      # Interaction detection
+│   │   └── recommendation_service.py # Smart alternatives
+│   ├── models/                 # Pydantic data models
+│   └── data/                   # Sample datasets
+├── frontend/                   # Frontend (React + Vite)
+│   ├── src/                    # UI Components and Logic
+│   ├── public/                 # Static assets
+│   └── package.json            # Frontend dependencies
+├── venv/                       # Python virtual environment
+├── requirements.txt            # Backend dependencies
+├── test_chatbot_integration.py # Integration tests for Chatbot
 └── README.md                   # Project documentation
 ```
 
@@ -41,68 +46,83 @@ arogyakalp/
 ## 🛠️ Setup and Installation
 
 ### 1. Prerequisites
-- Python 3.10 or higher.
+- **Python**: 3.10 or higher
+- **Node.js**: 18.0 or higher
+- **npm**: 9.0 or higher
 
-### 2. Create Virtual Environment
+### 2. Backend Setup
+From the project root:
 ```powershell
+# Create virtual environment
 python -m venv venv
+
+# Activate virtual environment
 .\venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
 ```
 
-### 3. Install Dependencies
+### 3. Frontend Setup
+From the project root:
 ```powershell
-pip install -r requirements.txt
+cd frontend
+npm install
 ```
 
 ---
 
 ## 🏃 Running the Application
 
-To start the FastAPI server, run the following command from the project root:
+To run the full application, you need to start both the backend and the frontend servers.
 
+### 🚀 Start Backend (FastAPI)
+Open a terminal in the root directory and run:
 ```powershell
+# Ensure venv is activated
+.\venv\Scripts\activate
+
+# Start the server
 uvicorn app.main:app --reload
 ```
+- **API URL**: `http://127.0.0.1:8000`
+- **Swagger Docs**: `http://127.0.0.1:8000/docs`
 
-- **API Base URL**: `http://127.0.0.1:8000`
-- **Interactive Documentation (Swagger UI)**: `http://127.0.0.1:8000/docs`
+### 💻 Start Frontend (React)
+Open a **new** terminal in the `frontend` directory and run:
+```powershell
+cd frontend
+npm install @vitejs/plugin-react --save-dev
+
+npm run dev
+```
+- **App URL**: `http://localhost:5173` (or the port shown in your terminal)
 
 ---
 
 ## 🧪 Testing and Verification
 
-### Automated Testing
-We have provided a `test_ner.py` script to verify the API functionality.
-
+### Automated Backend Tests
+We provide several scripts to verify the core logic:
 ```powershell
-# Make sure the server is running first!
-python test_ner.py
+# Test NER & Recommendation Pipeline
+python test_recommendation_integration.py
+
+# Test Chatbot NLP Logic
+python test_chatbot_integration.py
 ```
 
-**Expected results for sample text:**
-- **Input**: "Patient is taking Dolo 650 for fever and has allergy to penicillin"
-- **Output**:
-  ```json
-  {
-    "drugs": ["Dolo 650", "penicillin"],
-    "diseases": ["fever"],
-    "allergies": ["penicillin"]
-  }
-  ```
-
-### Manual Verification
-You can also test the API using `curl` or any API client like Postman:
-
+### Manual API Test (Powershell)
 ```powershell
-curl.exe -X POST "http://127.0.0.1:8000/extract_entities" `
-  -H "Content-Type: application/json" `
-  -d '{"text": "Patient with cough taking paracetamol"}'
+Invoke-RestMethod -Method Post -Uri "http://127.0.0.1:8000/chat" `
+  -ContentType "application/json" `
+  -Body '{"message": "Patient taking Dolo 650 with Aspirin"}'
 ```
 
 ---
 
-## 🧬 Future Scope
-- Integration of BioBERT or Spacy-based ML models for advanced NER.
-- Addition of ADR (Adverse Drug Reaction) prediction module.
-- Integration of a database (PostgreSQL/MongoDB) for clinical record storage.
-- Building a frontend dashboard.
+## 🧬 Roadmap
+- [ ] Integration of BioBERT for deep-learning-based NER.
+- [ ] Support for multi-lingual clinical notes (Hindi/English).
+- [ ] Database integration for persistent patient history.
+- [ ] Advanced visualization for drug interaction networks.

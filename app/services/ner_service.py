@@ -36,32 +36,75 @@ class NERService:
         # Keep a list of all generic names for DDI checking
         generic_drug_names = []
         
-        # Map labels from d4data/biomedical-ner-all
+        # Extract patient name and new drug to filter/focus analysis
+        patient_name = ""
+        new_drug_name = ""
+        import re
+        
+        name_match = re.search(r"Patient Name:\s*(.*)", text)
+        if name_match:
+            patient_name = name_match.group(1).strip().lower()
+            
+        new_drug_match = re.search(r"New Drug Prescribed:\s*-?\s*(.*)", text)
+        if new_drug_match:
+            new_drug_name = new_drug_match.group(1).strip().lower()
+        
+        # Map labels and merge subword tokens
+        processed_results = []
         for entity in results:
             label = entity.get("entity_group", "")
             word = entity.get("word", "").strip()
             
             if not word:
                 continue
+                
+            # If it's a subword token, merge it with the previous one regardless of label
+            if word.startswith("##") and processed_results:
+                processed_results[-1]["word"] += word[2:]
+                continue
+            
+            processed_results.append({"label": label, "word": word})
+
+        for entity in processed_results:
+            label = entity["label"]
+            word = entity["word"]
+            
+            # Clean: remove symbols and hashtags
+            clean_word = word.replace("#", "").strip(" -_")
+            
+            # Skip if it's too short and not alphanumeric (noise)
+            if len(clean_word) < 2 and not clean_word.isalnum():
+                continue
             
             if label in ["Medication", "DRUG", "CHEMICAL"]:
-                if word not in added_drugs:
-                    generic_name = normalize_drug_name(word)
-                    drugs.append(DrugEntity(original=word, generic=generic_name))
-                    added_drugs.add(word)
+                lower_word = clean_word.lower()
+                
+                # Skip if it matches patient name or common noise
+                if patient_name and (lower_word in patient_name or patient_name in lower_word):
+                    continue
+                if lower_word in ["patient", "name", "age", "years", "gender", "male", "female"]:
+                    continue
+
+                if lower_word not in added_drugs:
+                    generic_name = normalize_drug_name(clean_word)
+                    drugs.append(DrugEntity(original=clean_word, generic=generic_name))
+                    added_drugs.add(lower_word)
                     generic_drug_names.append(generic_name)
                     
-                    # Predict ADR for each drug found
-                    side_effects = adr_service.predict_adr(generic_name)
-                    if side_effects:
-                        adr_predictions.append(ADRPrediction(drug=word, side_effects=side_effects))
+                    # ONLY Predict ADR for the NEW drug
+                    is_new_drug = new_drug_name and (lower_word in new_drug_name or new_drug_name in lower_word)
+                    
+                    if is_new_drug:
+                        side_effects = adr_service.predict_adr(generic_name)
+                        if side_effects:
+                            adr_predictions.append(ADRPrediction(drug=clean_word, side_effects=side_effects))
                         
             elif label in ["Disease_disorder", "Sign_symptom", "DISEASE", "DISORDER"]:
-                if word not in diseases:
-                    diseases.append(word)
+                if clean_word.lower() not in [d.lower() for d in diseases]:
+                    diseases.append(clean_word)
             elif label in ["Biological_structure", "ALLERGEN"]:
-                if word not in allergies:
-                    allergies.append(word)
+                if clean_word.lower() not in [a.lower() for a in allergies]:
+                    allergies.append(clean_word)
         
         # Check for Drug-Drug Interactions (DDI)
         drug_interactions = []
@@ -72,6 +115,13 @@ class NERService:
                     drug_pair=res["drug_pair"],
                     interaction=res["interaction"]
                 ))
+        
+        # Get recommendations but filter to only those concerning the new drug
+        all_recommendations = recommendation_service.get_recommendations(drugs, adr_predictions, drug_interactions)
+        filtered_recommendations = [
+            r for r in all_recommendations 
+            if new_drug_name and (r.drug.lower() in new_drug_name or new_drug_name in r.drug.lower())
+        ]
                     
         return NERResponse(
             drugs=drugs,
@@ -79,5 +129,5 @@ class NERService:
             allergies=allergies,
             adr_predictions=adr_predictions,
             drug_interactions=drug_interactions,
-            recommendations=recommendation_service.get_recommendations(drugs, adr_predictions, drug_interactions)
+            recommendations=filtered_recommendations
         )

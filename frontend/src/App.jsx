@@ -2,16 +2,34 @@ import React, { useState } from 'react';
 import Header from './components/Header';
 import InputSection from './components/InputSection';
 import Results from './components/Results';
+import LoginPage from './components/LoginPage';
 
 function App() {
-  const [input, setInput] = useState('');
+  const [user, setUser] = useState(() => {
+    const savedUser = localStorage.getItem('arogyakalp_user');
+    return savedUser ? JSON.parse(savedUser) : null;
+  });
+  const [patientInfo, setPatientInfo] = useState({
+    name: '',
+    age: '',
+    gender: 'Male',
+    conditions: '',
+    currentMeds: '',
+    newDrug: '',
+    allergies: ''
+  });
   const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState(null);
   const [chatResponse, setChatResponse] = useState('');
   const [error, setError] = useState(null);
 
   const handleAnalyze = async () => {
-    if (!input.trim()) return;
+    const { name, age, gender, conditions, currentMeds, newDrug, allergies } = patientInfo;
+    
+    // Format input for the backend
+    const formattedInput = `Patient Name: ${name || 'N/A'}\nPatient Age: ${age || 'N/A'} years\nGender: ${gender}\n\nExisting Conditions:\n${conditions || 'None'}\n\nCurrent Medications:\n${currentMeds || 'None'}\n\nNew Drug Prescribed:\n- ${newDrug || 'None'}\n\nKnown Allergies:\n- ${allergies || 'None'}`;
+
+    if (!formattedInput.trim()) return;
 
     setIsLoading(true);
     setError(null);
@@ -24,17 +42,23 @@ function App() {
         fetch('/api/extract_entities', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ text: input })
+          body: JSON.stringify({ text: formattedInput })
         }),
         fetch('/api/chat', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ message: input })
+          body: JSON.stringify({ message: formattedInput })
         })
       ]);
 
-      if (!nerRes.ok || !chatRes.ok) {
-        throw new Error('Failed to fetch analysis from server.');
+      if (!nerRes.ok) {
+        const errData = await nerRes.text();
+        throw new Error(`NER Error (${nerRes.status}): ${errData || 'Unknown error'}`);
+      }
+      
+      if (!chatRes.ok) {
+        const errData = await chatRes.text();
+        throw new Error(`Chatbot Error (${chatRes.status}): ${errData || 'Unknown error'}`);
       }
 
       const nerData = await nerRes.json();
@@ -51,19 +75,41 @@ function App() {
   };
 
   const handleReset = () => {
-    setInput('');
+    setPatientInfo({
+      name: '',
+      age: '',
+      gender: 'Male',
+      conditions: '',
+      currentMeds: '',
+      newDrug: '',
+      allergies: ''
+    });
     setData(null);
     setChatResponse('');
     setError(null);
+  };
+
+  const handleLogin = (userData) => {
+    setUser(userData);
+    localStorage.setItem('arogyakalp_user', JSON.stringify(userData));
+  };
+
+  const handleLogout = () => {
+    setUser(null);
+    localStorage.removeItem('arogyakalp_user');
   };
 
   const showDangerBanner = data?.drug_interactions?.some(i => 
     i.interaction.toLowerCase().match(/danger|severe|warning|fatal/)
   );
 
+  if (!user) {
+    return <LoginPage onLogin={handleLogin} />;
+  }
+
   return (
     <div className="container">
-      <Header />
+      <Header user={user} onLogout={handleLogout} />
       
       {showDangerBanner && (
         <div 
@@ -81,8 +127,8 @@ function App() {
       )}
 
       <InputSection 
-        input={input} 
-        setInput={setInput} 
+        patientInfo={patientInfo} 
+        setPatientInfo={setPatientInfo} 
         onAnalyze={handleAnalyze} 
         isLoading={isLoading} 
         onReset={handleReset}

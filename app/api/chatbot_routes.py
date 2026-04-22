@@ -13,56 +13,59 @@ class ChatResponse(BaseModel):
 
 def generate_natural_response(ner_data) -> str:
     """
-    Summarizes structured NER data into a natural language string.
+    Summarizes structured NER data into a simple, natural language clinical assessment.
     """
     if not ner_data.drugs:
-        return "I couldn't identify any specific drugs in your message. Please provide drug names for a safety analysis."
+        return "I couldn't identify any specific medications in the notes. Please ensure the drug names are spelled correctly for a safety analysis."
 
     # Identify drugs
-    drug_names = []
-    for d in ner_data.drugs:
-        if d.original.lower() != d.generic.lower():
-            drug_names.append(f"{d.original} ({d.generic})")
-        else:
-            drug_names.append(d.original)
-    
+    drug_names = [d.original.capitalize() for d in ner_data.drugs]
     drugs_str = ", ".join(drug_names)
     
-    # 1. Start with identification
-    base_response = f"I've identified: {drugs_str}. "
+    # 1. Introduction
+    response = f"Based on the clinical assessment, I have identified the following medications: {drugs_str}. "
 
     # 2. Side effects (ADRs)
-    side_effects_text = ""
     if ner_data.adr_predictions:
-        se_list = []
+        se_details = []
         for adr in ner_data.adr_predictions:
+            # The backend already filters adr_predictions to only include the new drug
             if adr.side_effects:
-                se_list.append(f"{adr.drug} may cause {', '.join(adr.side_effects[:2])}")
+                se_details.append(f"The newly prescribed **{adr.drug}** has potential side effects like {', '.join(adr.side_effects[:2])}")
         
-        if se_list:
-            side_effects_text = "Possible side effects include: " + "; ".join(se_list) + ". "
+        if se_details:
+            response += "Regarding the new medication, " + ". ".join(se_details) + ". "
     else:
-        side_effects_text = "No major side effects were predicted for these drugs. "
+        response += "No major side effects were found for the newly prescribed medication. "
 
     # 3. Interactions (DDIs)
-    interaction_text = ""
-    if ner_data.drug_interactions:
-        bad_interactions = [i for i in ner_data.drug_interactions if i.interaction != "no known interaction"]
-        if bad_interactions:
-            interaction_text = "Warning: Interaction detected - " + "; ".join([i.interaction for i in bad_interactions]) + ". "
+    bad_interactions = [i for i in ner_data.drug_interactions if i.interaction.lower() != "no known interaction"]
+    if bad_interactions:
+        # Interactions involve BOTH new and old drugs
+        risky_pairs = [f"{' and '.join(i.drug_pair)}" for i in bad_interactions if "risky" in i.interaction.lower() or "danger" in i.interaction.lower()]
+        
+        if risky_pairs:
+            response += f"IMPORTANT: There is a potential interaction risk between {', '.join(risky_pairs)}. This combination should be monitored closely. "
         else:
-            interaction_text = "No significant drug-drug interactions detected. "
+            response += "Some mild interactions were noted between the new and existing medications. "
+    else:
+        response += "I found no significant drug-drug interactions between the new and existing medications. "
     
     # 4. Recommendations
-    recommendation_text = ""
     if ner_data.recommendations:
-        rec_list = [f"Consider {r.alternative} instead of {r.drug} ({r.issue})" for r in ner_data.recommendations]
-        recommendation_text = "Suggested alternatives: " + "; ".join(rec_list) + ". "
+        rec_list = []
+        for r in ner_data.recommendations:
+            # The backend already filters recommendations to only include the new drug
+            if "risky" in r.issue.lower() or "danger" in r.issue.lower():
+                rec_list.append(f"due to interaction risks with current meds, you might consider **{r.alternative}** as an alternative to **{r.drug}**")
+        
+        if rec_list:
+            response += "For better patient safety, " + "; ".join(rec_list) + ". "
 
-    # Combine
-    final_response = f"{base_response}{side_effects_text}{interaction_text}{recommendation_text}Always consult your doctor before making changes to your medication."
+    # Closing
+    response += "Please note that this is an AI-generated assessment. Always consult with a senior medical professional before making any changes to a patient's prescription."
     
-    return final_response
+    return response
 
 @router.post("/chat", response_model=ChatResponse)
 async def chat_endpoint(request: ChatRequest):

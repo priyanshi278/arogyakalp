@@ -1,0 +1,90 @@
+# ArogyaKalp: Frontend & Dataset Test Cases
+
+This document provides sample inputs (Clinical Notes/Messages) to test the ArogyaKalp system on the frontend. Use these cases to verify the Named Entity Recognition (NER), ADR Detection, Drug Interaction (DDI) logic, and Recommendation modules.
+
+---
+
+### Scenario 1: Single Drug Side Effect Detection (ADR)
+**Input:** "I am taking paracetamol for my fever, but I'm feeling a bit nauseous."
+**Dataset Match:** `adr_dataset.csv` (paracetamol -> nausea, liver damage, skin rash)
+**Expected Frontend Behavior:**
+- **NER:** "paracetamol" should be highlighted as a DRUG.
+- **Side Effects:** Displays "nausea", "liver damage", "skin rash" under potential side effects.
+- **Analysis:** Chat response should confirm the side effect "nausea" is known for paracetamol.
+
+---
+
+### Scenario 2: Dangerous Drug-Drug Interaction (DDI)
+**Input:** "Currently taking ibuprofen and warfarin. Is this combination safe?"
+**Dataset Match:** `ddi_dataset.csv` (ibuprofen + warfarin -> dangerous)
+**Expected Frontend Behavior:**
+- **Hazard Banner:** A red "🚨 HIGH RISK INTERACTION DETECTED" banner should appear at the top.
+- **Interactions Table:** Should show a "Dangerous" interaction between Ibuprofen and Warfarin.
+- **Results:** Visual indicators (badges/icons) should clearly mark this as high-risk.
+
+---
+
+### Scenario 3: Drug Recommendation & Alternatives
+**Input:** "I need an alternative for amoxicillin as I am allergic to it."
+**Dataset Match:** `drug_alternatives.csv` (amoxicillin -> azithromycin for infection)
+**Expected Frontend Behavior:**
+- **Recommendations Section:** Should suggest "azithromycin" as an alternative for "infection".
+- **Chat Response:** Should explain that azithromycin can be used instead of amoxicillin for infections.
+
+---
+
+### Scenario 4: Multiple Drugs & Conditions (Complex Note)
+**Input:** "Patient is on lisinopril for hypertension and aspirin for heart health. They also reported using ibuprofen for pain recently."
+**Dataset Match:** 
+- `ddi_dataset.csv`: (lisinopril + ibuprofen -> caution), (aspirin + ibuprofen -> risky), (lisinopril + aspirin -> risky)
+- `drug_alternatives.csv`: (lisinopril -> amlodipine)
+**Expected Frontend Behavior:**
+- **Multiple Interaction Rows:** Should show "Caution" and "Risky" rows for the different drug pairs.
+- **NER Summary:** Should identify "lisinopril", "aspirin", and "ibuprofen".
+- **Alternatives:** Suggest "amlodipine" for lisinopril if hypertension management is mentioned.
+
+---
+
+### Scenario 5: Safe Interaction
+**Input:** "Can I take paracetamol and caffeine together?"
+**Dataset Match:** `ddi_dataset.csv` (paracetamol + caffeine -> safe)
+**Expected Frontend Behavior:**
+- **Interactions Table:** Should show "Safe" or "No significant interaction found".
+- **Chat Response:** Confirms it is safe to take these together.
+
+---
+
+### Scenario 6: Edge Case - Unknown Drug
+**Input:** "I am taking Xyzzy-200 for my headache."
+**Expected Frontend Behavior:**
+- **NER:** Should likely fail to identify "Xyzzy-200" (heuristic/model limitation).
+- **Chat Response:** "I couldn't identify any specific drugs in your message. Please provide the generic or common brand name."
+- **Empty Results:** No side effects or interactions should be displayed.
+
+---
+
+### Scenario 7: Edge Case - Case Sensitivity & Formatting
+**Input:** "i take ASPIRIN daily. can i take ALBUTEROL?"
+**Dataset Match:** `adr_dataset.csv` (aspirin), `ddi_dataset.csv` (none for this pair specified as dangerous, but NER should pick them up).
+**Expected Frontend Behavior:**
+- **Normalization:** The system should correctly identify "ASPIRIN" and "ALBUTEROL" despite the casing.
+- **NER:** Shows both drugs in the list.
+
+---
+
+### Scenario 8: Common Brand Names (Mapped to Generics)
+**Input:** "I take Dolo 650 for my headache."
+**Logic:** Backend maps brand names like Dolo 650 to paracetamol.
+**Expected Frontend Behavior:**
+- **NER:** Identifies "Dolo 650".
+- **Analysis:** Displays side effects for "paracetamol".
+- **Message:** "Detected paracetamol (found as Dolo 650)..."
+
+---
+
+### Scenario 9: High Risk Warning
+**Input:** "I take aspirin and clopidogrel."
+**Dataset Match:** `ddi_dataset.csv` (aspirin + clopidogrel -> dangerous)
+**Expected Frontend Behavior:**
+- **Danger Badge:** Visible red alert for dangerous interaction.
+- **Chat Response:** Warns about the high risk of bleeding when combining these two antiplatelet drugs.

@@ -1,0 +1,32 @@
+[
+  {
+    "imr_number": "IMR-12345",
+    "name": "Alex",
+    "phone_number": "9876543210"
+  },
+  {
+    "imr_number": "IMR-56789",
+    "name": "Dr. Devdas Peter Singh",
+    "phone_number": "+91 7878787878"
+  },
+  {
+    "imr_number": "IMR-567890",
+    "name": "Devdas Peter Singh",
+    "phone_number": "7878787878"
+  },
+  {
+    "imr_number": "IMR-TEST",
+    "name": "Test Doctor",
+    "phone_number": "1234567890"
+  },
+  {
+    "imr_number": "IMR - 12345",
+    "name": "Devdas Immanuel",
+    "phone_number": "7894561230"
+  },
+  {
+    "imr_number": "IMR-24689",
+    "name": "Devdas Peter Singh",
+    "phone_number": "+91 7894561230"
+  }
+]

@@ -57,5 +57,5 @@ class DDIService:
         return results
 
 # Singleton instance to be loaded at startup
-dataset_path = os.path.join(os.path.dirname(__file__), "..", "data", "ddi_dataset.csv")
+dataset_path = os.path.join(os.path.dirname(__file__), "..", "data", "ddi_dataset_expanded.csv")
 ddi_service = DDIService(dataset_path)

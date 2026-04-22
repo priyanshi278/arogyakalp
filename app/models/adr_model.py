@@ -57,5 +57,5 @@ class ADRModel:
         return [self.side_effect_encoder.inverse_transform([idx])[0] for idx in top_indices]
 
 # Singleton instance to be loaded at startup
-dataset_path = os.path.join(os.path.dirname(__file__), "..", "data", "adr_dataset.csv")
+dataset_path = os.path.join(os.path.dirname(__file__), "..", "data", "adr_dataset_expanded.csv")
 adr_model_instance = ADRModel(dataset_path)

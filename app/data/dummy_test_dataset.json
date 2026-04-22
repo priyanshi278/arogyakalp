@@ -1,0 +1,802 @@
+[
+  {
+    "id": 1,
+    "text": "Patient Age: 29 years\nGender: Female\n\nExisting Conditions:\n- Insomnia\n- Hypertension\n\nCurrent Medications:\n- Amlodipine 5 mg\n\nNew Drug Prescribed:\n- Levothyroxine 75 mg\n\nKnown Allergies:\n- Warfarin"
+  },
+  {
+    "id": 2,
+    "text": "Patient Age: 27 years\nGender: Male\n\nExisting Conditions:\n- Insomnia\n- Hypertension\n\nCurrent Medications:\n- Metoprolol 5 mg\n\nNew Drug Prescribed:\n- Diclofenac 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 3,
+    "text": "Patient Age: 45 years\nGender: Male\n\nExisting Conditions:\n- Type 2 Diabetes\n- Allergies\n\nCurrent Medications:\n- Atorvastatin 100 mg\n- Levothyroxine 10 mg\n- Warfarin 50 mg\n\nNew Drug Prescribed:\n- Amoxicillin 25 mg\n\nKnown Allergies:\n- Losartan"
+  },
+  {
+    "id": 4,
+    "text": "Patient Age: 24 years\nGender: Female\n\nExisting Conditions:\n- Allergies\n\nCurrent Medications:\n- Clopidogrel 100 mg\n- Losartan 500 mg\n\nNew Drug Prescribed:\n- Furosemide 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 5,
+    "text": "Patient Age: 63 years\nGender: Female\n\nExisting Conditions:\n- Depression\n- Insomnia\n- Hypertension\n\nCurrent Medications:\n- Ibuprofen 50 mg\n\nNew Drug Prescribed:\n- Amlodipine 75 mg\n\nKnown Allergies:\n- Metoprolol"
+  },
+  {
+    "id": 6,
+    "text": "Patient Age: 84 years\nGender: Male\n\nExisting Conditions:\n- Flu\n- Heart disease\n- Anxiety\n\nCurrent Medications:\n- Azithromycin 100 mg\n- Amlodipine 100 mg\n- Albuterol 100 mg\n\nNew Drug Prescribed:\n- Aspirin 50 mg\n\nKnown Allergies:\n- Levothyroxine"
+  },
+  {
+    "id": 7,
+    "text": "Patient Age: 74 years\nGender: Female\n\nExisting Conditions:\n- Depression\n- Chronic pain\n- Flu\n\nCurrent Medications:\n- Metoprolol 10 mg\n- Warfarin 10 mg\n- Gabapentin 5 mg\n\nNew Drug Prescribed:\n- Furosemide 25 mg\n\nKnown Allergies:\n- Aspirin"
+  },
+  {
+    "id": 8,
+    "text": "Patient Age: 26 years\nGender: Male\n\nExisting Conditions:\n- Insomnia\n- Asthma\n- Chronic pain\n\nCurrent Medications:\n- Lisinopril 5 mg\n- Paracetamol 10 mg\n- Amlodipine 100 mg\n\nNew Drug Prescribed:\n- Gabapentin 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 9,
+    "text": "Patient Age: 49 years\nGender: Male\n\nExisting Conditions:\n- Type 2 Diabetes\n- Anxiety\n\nCurrent Medications:\n- Losartan 10 mg\n- Clopidogrel 100 mg\n- Sertraline 50 mg\n\nNew Drug Prescribed:\n- Gabapentin 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 10,
+    "text": "Patient Age: 71 years\nGender: Male\n\nExisting Conditions:\n- Type 2 Diabetes\n- Asthma\n\nCurrent Medications:\n- Clopidogrel 10 mg\n\nNew Drug Prescribed:\n- Amlodipine 50 mg\n\nKnown Allergies:\n- Lisinopril"
+  },
+  {
+    "id": 11,
+    "text": "Patient Age: 46 years\nGender: Female\n\nExisting Conditions:\n- Hypertension\n- Type 2 Diabetes\n- Heart disease\n\nCurrent Medications:\n- Azithromycin 5 mg\n- Omeprazole 500 mg\n\nNew Drug Prescribed:\n- Atorvastatin 25 mg\n\nKnown Allergies:\n- Furosemide"
+  },
+  {
+    "id": 12,
+    "text": "Patient Age: 71 years\nGender: Female\n\nExisting Conditions:\n- Heart disease\n- Allergies\n\nCurrent Medications:\n- Atorvastatin 5 mg\n- Metformin 5 mg\n- Sertraline 500 mg\n\nNew Drug Prescribed:\n- Omeprazole 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 13,
+    "text": "Patient Age: 42 years\nGender: Male\n\nExisting Conditions:\n- Allergies\n- Ear infection\n\nCurrent Medications:\n- Sertraline 500 mg\n- Levothyroxine 50 mg\n- Furosemide 500 mg\n\nNew Drug Prescribed:\n- Atorvastatin 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 14,
+    "text": "Patient Age: 34 years\nGender: Female\n\nExisting Conditions:\n- Depression\n- Hypertension\n- Bacterial infection\n\nCurrent Medications:\n- Losartan 5 mg\n\nNew Drug Prescribed:\n- Metformin 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 15,
+    "text": "Patient Age: 72 years\nGender: Male\n\nExisting Conditions:\n- Insomnia\n- Allergies\n- Hypertension\n\nCurrent Medications:\n- Metformin 500 mg\n- Lisinopril 10 mg\n\nNew Drug Prescribed:\n- Furosemide 50 mg\n\nKnown Allergies:\n- Albuterol"
+  },
+  {
+    "id": 16,
+    "text": "Patient Age: 84 years\nGender: Male\n\nExisting Conditions:\n- Heart disease\n- Hypertension\n\nCurrent Medications:\n- Losartan 500 mg\n- Paracetamol 50 mg\n\nNew Drug Prescribed:\n- Gabapentin 75 mg\n\nKnown Allergies:\n- Aspirin"
+  },
+  {
+    "id": 17,
+    "text": "Patient Age: 78 years\nGender: Male\n\nExisting Conditions:\n- Asthma\n- Anxiety\n\nCurrent Medications:\n- Sertraline 50 mg\n- Albuterol 10 mg\n- Furosemide 5 mg\n\nNew Drug Prescribed:\n- Diclofenac 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 18,
+    "text": "Patient Age: 38 years\nGender: Male\n\nExisting Conditions:\n- Type 2 Diabetes\n\nCurrent Medications:\n- Sertraline 50 mg\n\nNew Drug Prescribed:\n- Amlodipine 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 19,
+    "text": "Patient Age: 84 years\nGender: Female\n\nExisting Conditions:\n- Insomnia\n- Asthma\n\nCurrent Medications:\n- Paracetamol 5 mg\n- Warfarin 5 mg\n- Albuterol 5 mg\n\nNew Drug Prescribed:\n- Clopidogrel 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 20,
+    "text": "Patient Age: 69 years\nGender: Male\n\nExisting Conditions:\n- Flu\n\nCurrent Medications:\n- Omeprazole 5 mg\n- Albuterol 50 mg\n- Losartan 10 mg\n\nNew Drug Prescribed:\n- Amoxicillin 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 21,
+    "text": "Patient Age: 26 years\nGender: Male\n\nExisting Conditions:\n- Bacterial infection\n- Hypertension\n- Type 2 Diabetes\n\nCurrent Medications:\n- Amoxicillin 50 mg\n\nNew Drug Prescribed:\n- Levothyroxine 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 22,
+    "text": "Patient Age: 26 years\nGender: Female\n\nExisting Conditions:\n- Hypertension\n\nCurrent Medications:\n- Clopidogrel 50 mg\n\nNew Drug Prescribed:\n- Atorvastatin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 23,
+    "text": "Patient Age: 18 years\nGender: Male\n\nExisting Conditions:\n- Chronic pain\n\nCurrent Medications:\n- Lisinopril 100 mg\n\nNew Drug Prescribed:\n- Metformin 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 24,
+    "text": "Patient Age: 77 years\nGender: Male\n\nExisting Conditions:\n- Depression\n- Bacterial infection\n\nCurrent Medications:\n- Amlodipine 100 mg\n- Aspirin 500 mg\n\nNew Drug Prescribed:\n- Sertraline 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 25,
+    "text": "Patient Age: 48 years\nGender: Male\n\nExisting Conditions:\n- Bacterial infection\n- Asthma\n- Hypertension\n\nCurrent Medications:\n- Clopidogrel 10 mg\n\nNew Drug Prescribed:\n- Azithromycin 25 mg\n\nKnown Allergies:\n- Sertraline"
+  },
+  {
+    "id": 26,
+    "text": "Patient Age: 29 years\nGender: Male\n\nExisting Conditions:\n- Chronic pain\n\nCurrent Medications:\n- Amoxicillin 100 mg\n- Diclofenac 100 mg\n- Paracetamol 50 mg\n\nNew Drug Prescribed:\n- Levothyroxine 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 27,
+    "text": "Patient Age: 62 years\nGender: Female\n\nExisting Conditions:\n- Hypertension\n- Insomnia\n- Flu\n\nCurrent Medications:\n- Metoprolol 500 mg\n\nNew Drug Prescribed:\n- Gabapentin 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 28,
+    "text": "Patient Age: 32 years\nGender: Male\n\nExisting Conditions:\n- Allergies\n- Anxiety\n\nCurrent Medications:\n- Ibuprofen 10 mg\n\nNew Drug Prescribed:\n- Lisinopril 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 29,
+    "text": "Patient Age: 44 years\nGender: Female\n\nExisting Conditions:\n- Ear infection\n- Heart disease\n\nCurrent Medications:\n- Furosemide 500 mg\n\nNew Drug Prescribed:\n- Paracetamol 25 mg\n\nKnown Allergies:\n- Omeprazole"
+  },
+  {
+    "id": 30,
+    "text": "Patient Age: 52 years\nGender: Male\n\nExisting Conditions:\n- Chronic pain\n\nCurrent Medications:\n- Albuterol 500 mg\n\nNew Drug Prescribed:\n- Gabapentin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 31,
+    "text": "Patient Age: 46 years\nGender: Female\n\nExisting Conditions:\n- Asthma\n\nCurrent Medications:\n- Azithromycin 500 mg\n- Metformin 5 mg\n- Ibuprofen 50 mg\n\nNew Drug Prescribed:\n- Omeprazole 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 32,
+    "text": "Patient Age: 39 years\nGender: Female\n\nExisting Conditions:\n- Type 2 Diabetes\n- Anxiety\n\nCurrent Medications:\n- Warfarin 10 mg\n- Metoprolol 500 mg\n\nNew Drug Prescribed:\n- Atorvastatin 50 mg\n\nKnown Allergies:\n- Ibuprofen"
+  },
+  {
+    "id": 33,
+    "text": "Patient Age: 24 years\nGender: Male\n\nExisting Conditions:\n- Depression\n- Asthma\n- Bacterial infection\n\nCurrent Medications:\n- Atorvastatin 50 mg\n- Amoxicillin 100 mg\n- Amlodipine 5 mg\n\nNew Drug Prescribed:\n- Sertraline 25 mg\n\nKnown Allergies:\n- Amoxicillin"
+  },
+  {
+    "id": 34,
+    "text": "Patient Age: 84 years\nGender: Female\n\nExisting Conditions:\n- Bacterial infection\n- Insomnia\n- Heart disease\n\nCurrent Medications:\n- Amlodipine 500 mg\n\nNew Drug Prescribed:\n- Gabapentin 50 mg\n\nKnown Allergies:\n- Aspirin"
+  },
+  {
+    "id": 35,
+    "text": "Patient Age: 27 years\nGender: Male\n\nExisting Conditions:\n- Type 2 Diabetes\n\nCurrent Medications:\n- Losartan 100 mg\n\nNew Drug Prescribed:\n- Paracetamol 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 36,
+    "text": "Patient Age: 50 years\nGender: Female\n\nExisting Conditions:\n- Insomnia\n- Type 2 Diabetes\n- Hypertension\n\nCurrent Medications:\n- Warfarin 5 mg\n- Metformin 10 mg\n- Omeprazole 100 mg\n\nNew Drug Prescribed:\n- Sertraline 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 37,
+    "text": "Patient Age: 68 years\nGender: Male\n\nExisting Conditions:\n- Hypertension\n- Anxiety\n\nCurrent Medications:\n- Levothyroxine 100 mg\n\nNew Drug Prescribed:\n- Omeprazole 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 38,
+    "text": "Patient Age: 31 years\nGender: Male\n\nExisting Conditions:\n- Ear infection\n\nCurrent Medications:\n- Diclofenac 10 mg\n- Warfarin 100 mg\n- Metformin 50 mg\n\nNew Drug Prescribed:\n- Lisinopril 75 mg\n\nKnown Allergies:\n- Albuterol"
+  },
+  {
+    "id": 39,
+    "text": "Patient Age: 35 years\nGender: Male\n\nExisting Conditions:\n- Asthma\n\nCurrent Medications:\n- Aspirin 500 mg\n- Furosemide 5 mg\n- Levothyroxine 100 mg\n\nNew Drug Prescribed:\n- Azithromycin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 40,
+    "text": "Patient Age: 60 years\nGender: Female\n\nExisting Conditions:\n- Chronic pain\n- Allergies\n\nCurrent Medications:\n- Clopidogrel 10 mg\n\nNew Drug Prescribed:\n- Albuterol 25 mg\n\nKnown Allergies:\n- Amlodipine"
+  },
+  {
+    "id": 41,
+    "text": "Patient Age: 67 years\nGender: Male\n\nExisting Conditions:\n- Anxiety\n- Type 2 Diabetes\n- Depression\n\nCurrent Medications:\n- Furosemide 500 mg\n\nNew Drug Prescribed:\n- Albuterol 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 42,
+    "text": "Patient Age: 82 years\nGender: Female\n\nExisting Conditions:\n- Heart disease\n- Chronic pain\n\nCurrent Medications:\n- Atorvastatin 5 mg\n\nNew Drug Prescribed:\n- Losartan 75 mg\n\nKnown Allergies:\n- Gabapentin"
+  },
+  {
+    "id": 43,
+    "text": "Patient Age: 52 years\nGender: Male\n\nExisting Conditions:\n- Hypertension\n- Bacterial infection\n\nCurrent Medications:\n- Furosemide 10 mg\n- Gabapentin 50 mg\n- Metformin 5 mg\n\nNew Drug Prescribed:\n- Diclofenac 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 44,
+    "text": "Patient Age: 78 years\nGender: Female\n\nExisting Conditions:\n- Asthma\n- Insomnia\n- Heart disease\n\nCurrent Medications:\n- Azithromycin 100 mg\n\nNew Drug Prescribed:\n- Albuterol 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 45,
+    "text": "Patient Age: 28 years\nGender: Male\n\nExisting Conditions:\n- Allergies\n- Heart disease\n\nCurrent Medications:\n- Warfarin 500 mg\n\nNew Drug Prescribed:\n- Levothyroxine 75 mg\n\nKnown Allergies:\n- Sertraline"
+  },
+  {
+    "id": 46,
+    "text": "Patient Age: 20 years\nGender: Female\n\nExisting Conditions:\n- Insomnia\n- Type 2 Diabetes\n- Depression\n\nCurrent Medications:\n- Atorvastatin 500 mg\n- Warfarin 50 mg\n\nNew Drug Prescribed:\n- Gabapentin 75 mg\n\nKnown Allergies:\n- Ibuprofen"
+  },
+  {
+    "id": 47,
+    "text": "Patient Age: 26 years\nGender: Female\n\nExisting Conditions:\n- Allergies\n- Heart disease\n\nCurrent Medications:\n- Clopidogrel 10 mg\n\nNew Drug Prescribed:\n- Paracetamol 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 48,
+    "text": "Patient Age: 75 years\nGender: Male\n\nExisting Conditions:\n- Bacterial infection\n- Asthma\n\nCurrent Medications:\n- Omeprazole 50 mg\n- Diclofenac 50 mg\n- Lisinopril 10 mg\n\nNew Drug Prescribed:\n- Sertraline 50 mg\n\nKnown Allergies:\n- Azithromycin"
+  },
+  {
+    "id": 49,
+    "text": "Patient Age: 64 years\nGender: Male\n\nExisting Conditions:\n- Type 2 Diabetes\n- Asthma\n\nCurrent Medications:\n- Paracetamol 500 mg\n- Furosemide 50 mg\n\nNew Drug Prescribed:\n- Atorvastatin 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 50,
+    "text": "Patient Age: 84 years\nGender: Male\n\nExisting Conditions:\n- Ear infection\n- Hypertension\n- Flu\n\nCurrent Medications:\n- Diclofenac 10 mg\n- Losartan 500 mg\n- Aspirin 50 mg\n\nNew Drug Prescribed:\n- Ibuprofen 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 51,
+    "text": "Patient Age: 52 years\nGender: Female\n\nExisting Conditions:\n- Bacterial infection\n- Insomnia\n\nCurrent Medications:\n- Diclofenac 100 mg\n\nNew Drug Prescribed:\n- Atorvastatin 50 mg\n\nKnown Allergies:\n- Levothyroxine"
+  },
+  {
+    "id": 52,
+    "text": "Patient Age: 26 years\nGender: Male\n\nExisting Conditions:\n- Anxiety\n- Ear infection\n- Type 2 Diabetes\n\nCurrent Medications:\n- Sertraline 5 mg\n- Amlodipine 100 mg\n- Paracetamol 100 mg\n\nNew Drug Prescribed:\n- Ibuprofen 25 mg\n\nKnown Allergies:\n- Omeprazole"
+  },
+  {
+    "id": 53,
+    "text": "Patient Age: 34 years\nGender: Female\n\nExisting Conditions:\n- Hypertension\n- Asthma\n\nCurrent Medications:\n- Azithromycin 5 mg\n- Paracetamol 100 mg\n- Ibuprofen 500 mg\n\nNew Drug Prescribed:\n- Aspirin 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 54,
+    "text": "Patient Age: 75 years\nGender: Male\n\nExisting Conditions:\n- Bacterial infection\n- Chronic pain\n\nCurrent Medications:\n- Metoprolol 50 mg\n\nNew Drug Prescribed:\n- Clopidogrel 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 55,
+    "text": "Patient Age: 19 years\nGender: Female\n\nExisting Conditions:\n- Heart disease\n- Chronic pain\n\nCurrent Medications:\n- Aspirin 100 mg\n- Ibuprofen 10 mg\n- Albuterol 10 mg\n\nNew Drug Prescribed:\n- Metformin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 56,
+    "text": "Patient Age: 43 years\nGender: Female\n\nExisting Conditions:\n- Heart disease\n\nCurrent Medications:\n- Furosemide 500 mg\n- Lisinopril 100 mg\n\nNew Drug Prescribed:\n- Warfarin 75 mg\n\nKnown Allergies:\n- Sertraline"
+  },
+  {
+    "id": 57,
+    "text": "Patient Age: 28 years\nGender: Female\n\nExisting Conditions:\n- Anxiety\n- Chronic pain\n\nCurrent Medications:\n- Losartan 50 mg\n- Metformin 5 mg\n- Sertraline 100 mg\n\nNew Drug Prescribed:\n- Levothyroxine 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 58,
+    "text": "Patient Age: 70 years\nGender: Female\n\nExisting Conditions:\n- Hypertension\n\nCurrent Medications:\n- Sertraline 500 mg\n- Lisinopril 10 mg\n- Omeprazole 100 mg\n\nNew Drug Prescribed:\n- Warfarin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 59,
+    "text": "Patient Age: 66 years\nGender: Female\n\nExisting Conditions:\n- Anxiety\n\nCurrent Medications:\n- Furosemide 50 mg\n- Atorvastatin 100 mg\n\nNew Drug Prescribed:\n- Sertraline 50 mg\n\nKnown Allergies:\n- Levothyroxine"
+  },
+  {
+    "id": 60,
+    "text": "Patient Age: 37 years\nGender: Female\n\nExisting Conditions:\n- Chronic pain\n\nCurrent Medications:\n- Metformin 10 mg\n- Albuterol 10 mg\n- Diclofenac 50 mg\n\nNew Drug Prescribed:\n- Aspirin 75 mg\n\nKnown Allergies:\n- Aspirin"
+  },
+  {
+    "id": 61,
+    "text": "Patient Age: 54 years\nGender: Female\n\nExisting Conditions:\n- Ear infection\n- Depression\n\nCurrent Medications:\n- Lisinopril 500 mg\n\nNew Drug Prescribed:\n- Clopidogrel 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 62,
+    "text": "Patient Age: 63 years\nGender: Female\n\nExisting Conditions:\n- Flu\n- Depression\n\nCurrent Medications:\n- Metformin 500 mg\n- Metoprolol 10 mg\n- Ibuprofen 10 mg\n\nNew Drug Prescribed:\n- Omeprazole 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 63,
+    "text": "Patient Age: 71 years\nGender: Male\n\nExisting Conditions:\n- Heart disease\n- Allergies\n- Depression\n\nCurrent Medications:\n- Furosemide 10 mg\n\nNew Drug Prescribed:\n- Azithromycin 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 64,
+    "text": "Patient Age: 79 years\nGender: Male\n\nExisting Conditions:\n- Heart disease\n\nCurrent Medications:\n- Metformin 500 mg\n\nNew Drug Prescribed:\n- Losartan 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 65,
+    "text": "Patient Age: 67 years\nGender: Female\n\nExisting Conditions:\n- Type 2 Diabetes\n- Anxiety\n- Depression\n\nCurrent Medications:\n- Metoprolol 10 mg\n- Aspirin 5 mg\n- Warfarin 50 mg\n\nNew Drug Prescribed:\n- Losartan 25 mg\n\nKnown Allergies:\n- Amlodipine"
+  },
+  {
+    "id": 66,
+    "text": "Patient Age: 52 years\nGender: Female\n\nExisting Conditions:\n- Insomnia\n- Flu\n- Heart disease\n\nCurrent Medications:\n- Amlodipine 500 mg\n- Paracetamol 50 mg\n- Atorvastatin 5 mg\n\nNew Drug Prescribed:\n- Clopidogrel 50 mg\n\nKnown Allergies:\n- Metoprolol"
+  },
+  {
+    "id": 67,
+    "text": "Patient Age: 60 years\nGender: Female\n\nExisting Conditions:\n- Hypertension\n- Chronic pain\n- Bacterial infection\n\nCurrent Medications:\n- Losartan 500 mg\n- Warfarin 500 mg\n- Levothyroxine 50 mg\n\nNew Drug Prescribed:\n- Gabapentin 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 68,
+    "text": "Patient Age: 56 years\nGender: Female\n\nExisting Conditions:\n- Allergies\n- Chronic pain\n- Hypertension\n\nCurrent Medications:\n- Azithromycin 50 mg\n\nNew Drug Prescribed:\n- Paracetamol 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 69,
+    "text": "Patient Age: 49 years\nGender: Male\n\nExisting Conditions:\n- Allergies\n- Flu\n\nCurrent Medications:\n- Lisinopril 10 mg\n- Paracetamol 500 mg\n\nNew Drug Prescribed:\n- Metformin 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 70,
+    "text": "Patient Age: 42 years\nGender: Female\n\nExisting Conditions:\n- Asthma\n- Insomnia\n- Flu\n\nCurrent Medications:\n- Amoxicillin 500 mg\n- Clopidogrel 50 mg\n\nNew Drug Prescribed:\n- Azithromycin 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 71,
+    "text": "Patient Age: 84 years\nGender: Female\n\nExisting Conditions:\n- Depression\n- Anxiety\n\nCurrent Medications:\n- Ibuprofen 5 mg\n- Aspirin 500 mg\n- Amlodipine 10 mg\n\nNew Drug Prescribed:\n- Furosemide 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 72,
+    "text": "Patient Age: 29 years\nGender: Male\n\nExisting Conditions:\n- Type 2 Diabetes\n\nCurrent Medications:\n- Albuterol 50 mg\n- Ibuprofen 10 mg\n- Amoxicillin 10 mg\n\nNew Drug Prescribed:\n- Paracetamol 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 73,
+    "text": "Patient Age: 18 years\nGender: Female\n\nExisting Conditions:\n- Bacterial infection\n- Depression\n\nCurrent Medications:\n- Metformin 10 mg\n- Furosemide 100 mg\n\nNew Drug Prescribed:\n- Clopidogrel 25 mg\n\nKnown Allergies:\n- Aspirin"
+  },
+  {
+    "id": 74,
+    "text": "Patient Age: 48 years\nGender: Female\n\nExisting Conditions:\n- Chronic pain\n- Bacterial infection\n\nCurrent Medications:\n- Clopidogrel 5 mg\n- Losartan 100 mg\n\nNew Drug Prescribed:\n- Diclofenac 75 mg\n\nKnown Allergies:\n- Diclofenac"
+  },
+  {
+    "id": 75,
+    "text": "Patient Age: 23 years\nGender: Female\n\nExisting Conditions:\n- Heart disease\n- Asthma\n\nCurrent Medications:\n- Lisinopril 10 mg\n- Metformin 100 mg\n\nNew Drug Prescribed:\n- Paracetamol 25 mg\n\nKnown Allergies:\n- Clopidogrel"
+  },
+  {
+    "id": 76,
+    "text": "Patient Age: 36 years\nGender: Male\n\nExisting Conditions:\n- Chronic pain\n\nCurrent Medications:\n- Furosemide 500 mg\n\nNew Drug Prescribed:\n- Lisinopril 25 mg\n\nKnown Allergies:\n- Atorvastatin"
+  },
+  {
+    "id": 77,
+    "text": "Patient Age: 46 years\nGender: Male\n\nExisting Conditions:\n- Insomnia\n- Asthma\n- Chronic pain\n\nCurrent Medications:\n- Clopidogrel 10 mg\n\nNew Drug Prescribed:\n- Metoprolol 75 mg\n\nKnown Allergies:\n- Warfarin"
+  },
+  {
+    "id": 78,
+    "text": "Patient Age: 53 years\nGender: Male\n\nExisting Conditions:\n- Bacterial infection\n- Type 2 Diabetes\n\nCurrent Medications:\n- Omeprazole 5 mg\n- Losartan 100 mg\n\nNew Drug Prescribed:\n- Metoprolol 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 79,
+    "text": "Patient Age: 29 years\nGender: Male\n\nExisting Conditions:\n- Asthma\n- Hypertension\n\nCurrent Medications:\n- Diclofenac 50 mg\n- Gabapentin 5 mg\n- Sertraline 50 mg\n\nNew Drug Prescribed:\n- Furosemide 25 mg\n\nKnown Allergies:\n- Diclofenac"
+  },
+  {
+    "id": 80,
+    "text": "Patient Age: 64 years\nGender: Female\n\nExisting Conditions:\n- Allergies\n- Heart disease\n- Bacterial infection\n\nCurrent Medications:\n- Furosemide 50 mg\n- Omeprazole 100 mg\n\nNew Drug Prescribed:\n- Lisinopril 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 81,
+    "text": "Patient Age: 41 years\nGender: Male\n\nExisting Conditions:\n- Bacterial infection\n\nCurrent Medications:\n- Ibuprofen 5 mg\n- Aspirin 100 mg\n\nNew Drug Prescribed:\n- Atorvastatin 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 82,
+    "text": "Patient Age: 83 years\nGender: Male\n\nExisting Conditions:\n- Allergies\n\nCurrent Medications:\n- Metformin 5 mg\n- Warfarin 5 mg\n\nNew Drug Prescribed:\n- Paracetamol 25 mg\n\nKnown Allergies:\n- Clopidogrel"
+  },
+  {
+    "id": 83,
+    "text": "Patient Age: 51 years\nGender: Female\n\nExisting Conditions:\n- Insomnia\n- Allergies\n\nCurrent Medications:\n- Omeprazole 50 mg\n- Paracetamol 500 mg\n\nNew Drug Prescribed:\n- Diclofenac 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 84,
+    "text": "Patient Age: 66 years\nGender: Female\n\nExisting Conditions:\n- Chronic pain\n- Anxiety\n- Allergies\n\nCurrent Medications:\n- Aspirin 5 mg\n- Warfarin 100 mg\n- Ibuprofen 100 mg\n\nNew Drug Prescribed:\n- Losartan 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 85,
+    "text": "Patient Age: 74 years\nGender: Female\n\nExisting Conditions:\n- Insomnia\n- Heart disease\n\nCurrent Medications:\n- Gabapentin 10 mg\n- Levothyroxine 10 mg\n- Metoprolol 100 mg\n\nNew Drug Prescribed:\n- Metformin 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 86,
+    "text": "Patient Age: 54 years\nGender: Male\n\nExisting Conditions:\n- Insomnia\n\nCurrent Medications:\n- Diclofenac 100 mg\n\nNew Drug Prescribed:\n- Omeprazole 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 87,
+    "text": "Patient Age: 48 years\nGender: Female\n\nExisting Conditions:\n- Anxiety\n- Depression\n\nCurrent Medications:\n- Losartan 500 mg\n- Amlodipine 500 mg\n- Ibuprofen 100 mg\n\nNew Drug Prescribed:\n- Gabapentin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 88,
+    "text": "Patient Age: 21 years\nGender: Female\n\nExisting Conditions:\n- Insomnia\n- Type 2 Diabetes\n\nCurrent Medications:\n- Gabapentin 5 mg\n- Metformin 10 mg\n- Albuterol 500 mg\n\nNew Drug Prescribed:\n- Amoxicillin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 89,
+    "text": "Patient Age: 69 years\nGender: Female\n\nExisting Conditions:\n- Chronic pain\n- Anxiety\n\nCurrent Medications:\n- Atorvastatin 10 mg\n- Clopidogrel 100 mg\n- Lisinopril 500 mg\n\nNew Drug Prescribed:\n- Ibuprofen 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 90,
+    "text": "Patient Age: 76 years\nGender: Female\n\nExisting Conditions:\n- Hypertension\n\nCurrent Medications:\n- Warfarin 5 mg\n- Levothyroxine 50 mg\n- Amlodipine 5 mg\n\nNew Drug Prescribed:\n- Amoxicillin 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 91,
+    "text": "Patient Age: 63 years\nGender: Female\n\nExisting Conditions:\n- Ear infection\n\nCurrent Medications:\n- Lisinopril 50 mg\n- Ibuprofen 500 mg\n\nNew Drug Prescribed:\n- Metoprolol 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 92,
+    "text": "Patient Age: 31 years\nGender: Female\n\nExisting Conditions:\n- Flu\n- Hypertension\n\nCurrent Medications:\n- Diclofenac 500 mg\n\nNew Drug Prescribed:\n- Furosemide 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 93,
+    "text": "Patient Age: 80 years\nGender: Female\n\nExisting Conditions:\n- Asthma\n- Bacterial infection\n- Ear infection\n\nCurrent Medications:\n- Clopidogrel 100 mg\n- Atorvastatin 50 mg\n\nNew Drug Prescribed:\n- Warfarin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 94,
+    "text": "Patient Age: 34 years\nGender: Female\n\nExisting Conditions:\n- Asthma\n\nCurrent Medications:\n- Clopidogrel 10 mg\n- Diclofenac 500 mg\n- Aspirin 500 mg\n\nNew Drug Prescribed:\n- Ibuprofen 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 95,
+    "text": "Patient Age: 52 years\nGender: Male\n\nExisting Conditions:\n- Ear infection\n- Bacterial infection\n\nCurrent Medications:\n- Paracetamol 100 mg\n\nNew Drug Prescribed:\n- Furosemide 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 96,
+    "text": "Patient Age: 43 years\nGender: Male\n\nExisting Conditions:\n- Insomnia\n- Heart disease\n- Hypertension\n\nCurrent Medications:\n- Amoxicillin 10 mg\n- Atorvastatin 50 mg\n\nNew Drug Prescribed:\n- Warfarin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 97,
+    "text": "Patient Age: 76 years\nGender: Male\n\nExisting Conditions:\n- Chronic pain\n- Bacterial infection\n- Depression\n\nCurrent Medications:\n- Atorvastatin 10 mg\n- Metoprolol 10 mg\n\nNew Drug Prescribed:\n- Metformin 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 98,
+    "text": "Patient Age: 77 years\nGender: Male\n\nExisting Conditions:\n- Heart disease\n\nCurrent Medications:\n- Metformin 100 mg\n\nNew Drug Prescribed:\n- Levothyroxine 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 99,
+    "text": "Patient Age: 76 years\nGender: Male\n\nExisting Conditions:\n- Type 2 Diabetes\n- Allergies\n\nCurrent Medications:\n- Amlodipine 10 mg\n- Gabapentin 50 mg\n\nNew Drug Prescribed:\n- Metformin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 100,
+    "text": "Patient Age: 69 years\nGender: Female\n\nExisting Conditions:\n- Ear infection\n- Anxiety\n\nCurrent Medications:\n- Clopidogrel 100 mg\n\nNew Drug Prescribed:\n- Omeprazole 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 101,
+    "text": "Patient Age: 70 years\nGender: Female\n\nExisting Conditions:\n- Insomnia\n\nCurrent Medications:\n- Metoprolol 50 mg\n\nNew Drug Prescribed:\n- Warfarin 25 mg\n\nKnown Allergies:\n- Atorvastatin"
+  },
+  {
+    "id": 102,
+    "text": "Patient Age: 67 years\nGender: Female\n\nExisting Conditions:\n- Chronic pain\n\nCurrent Medications:\n- Warfarin 500 mg\n\nNew Drug Prescribed:\n- Levothyroxine 25 mg\n\nKnown Allergies:\n- Amoxicillin"
+  },
+  {
+    "id": 103,
+    "text": "Patient Age: 84 years\nGender: Male\n\nExisting Conditions:\n- Asthma\n\nCurrent Medications:\n- Metoprolol 5 mg\n- Ibuprofen 100 mg\n\nNew Drug Prescribed:\n- Losartan 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 104,
+    "text": "Patient Age: 81 years\nGender: Male\n\nExisting Conditions:\n- Flu\n\nCurrent Medications:\n- Clopidogrel 50 mg\n- Warfarin 500 mg\n- Ibuprofen 50 mg\n\nNew Drug Prescribed:\n- Losartan 50 mg\n\nKnown Allergies:\n- Metformin"
+  },
+  {
+    "id": 105,
+    "text": "Patient Age: 19 years\nGender: Male\n\nExisting Conditions:\n- Depression\n- Asthma\n- Type 2 Diabetes\n\nCurrent Medications:\n- Amoxicillin 100 mg\n\nNew Drug Prescribed:\n- Metoprolol 75 mg\n\nKnown Allergies:\n- Furosemide"
+  },
+  {
+    "id": 106,
+    "text": "Patient Age: 18 years\nGender: Male\n\nExisting Conditions:\n- Insomnia\n- Heart disease\n\nCurrent Medications:\n- Furosemide 50 mg\n- Amoxicillin 50 mg\n- Omeprazole 500 mg\n\nNew Drug Prescribed:\n- Gabapentin 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 107,
+    "text": "Patient Age: 56 years\nGender: Male\n\nExisting Conditions:\n- Insomnia\n- Chronic pain\n\nCurrent Medications:\n- Omeprazole 50 mg\n\nNew Drug Prescribed:\n- Metformin 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 108,
+    "text": "Patient Age: 33 years\nGender: Male\n\nExisting Conditions:\n- Asthma\n- Type 2 Diabetes\n- Insomnia\n\nCurrent Medications:\n- Omeprazole 10 mg\n- Furosemide 500 mg\n\nNew Drug Prescribed:\n- Amoxicillin 25 mg\n\nKnown Allergies:\n- Omeprazole"
+  },
+  {
+    "id": 109,
+    "text": "Patient Age: 29 years\nGender: Female\n\nExisting Conditions:\n- Flu\n\nCurrent Medications:\n- Albuterol 5 mg\n\nNew Drug Prescribed:\n- Levothyroxine 50 mg\n\nKnown Allergies:\n- Aspirin"
+  },
+  {
+    "id": 110,
+    "text": "Patient Age: 82 years\nGender: Female\n\nExisting Conditions:\n- Asthma\n- Insomnia\n\nCurrent Medications:\n- Omeprazole 5 mg\n- Gabapentin 50 mg\n\nNew Drug Prescribed:\n- Amoxicillin 25 mg\n\nKnown Allergies:\n- Furosemide"
+  },
+  {
+    "id": 111,
+    "text": "Patient Age: 18 years\nGender: Female\n\nExisting Conditions:\n- Allergies\n- Hypertension\n- Ear infection\n\nCurrent Medications:\n- Ibuprofen 100 mg\n\nNew Drug Prescribed:\n- Aspirin 25 mg\n\nKnown Allergies:\n- Aspirin"
+  },
+  {
+    "id": 112,
+    "text": "Patient Age: 80 years\nGender: Male\n\nExisting Conditions:\n- Insomnia\n- Heart disease\n- Type 2 Diabetes\n\nCurrent Medications:\n- Atorvastatin 100 mg\n- Albuterol 100 mg\n\nNew Drug Prescribed:\n- Paracetamol 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 113,
+    "text": "Patient Age: 47 years\nGender: Male\n\nExisting Conditions:\n- Allergies\n- Heart disease\n- Depression\n\nCurrent Medications:\n- Warfarin 500 mg\n- Lisinopril 500 mg\n- Losartan 500 mg\n\nNew Drug Prescribed:\n- Amlodipine 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 114,
+    "text": "Patient Age: 25 years\nGender: Male\n\nExisting Conditions:\n- Type 2 Diabetes\n- Allergies\n- Bacterial infection\n\nCurrent Medications:\n- Aspirin 50 mg\n- Amlodipine 5 mg\n- Furosemide 10 mg\n\nNew Drug Prescribed:\n- Metformin 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 115,
+    "text": "Patient Age: 52 years\nGender: Female\n\nExisting Conditions:\n- Type 2 Diabetes\n- Flu\n\nCurrent Medications:\n- Metoprolol 5 mg\n- Ibuprofen 100 mg\n- Lisinopril 5 mg\n\nNew Drug Prescribed:\n- Omeprazole 25 mg\n\nKnown Allergies:\n- Sertraline"
+  },
+  {
+    "id": 116,
+    "text": "Patient Age: 37 years\nGender: Male\n\nExisting Conditions:\n- Heart disease\n- Allergies\n- Anxiety\n\nCurrent Medications:\n- Paracetamol 10 mg\n- Levothyroxine 50 mg\n- Omeprazole 10 mg\n\nNew Drug Prescribed:\n- Ibuprofen 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 117,
+    "text": "Patient Age: 65 years\nGender: Male\n\nExisting Conditions:\n- Flu\n\nCurrent Medications:\n- Clopidogrel 100 mg\n\nNew Drug Prescribed:\n- Metoprolol 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 118,
+    "text": "Patient Age: 67 years\nGender: Female\n\nExisting Conditions:\n- Ear infection\n\nCurrent Medications:\n- Metformin 10 mg\n\nNew Drug Prescribed:\n- Ibuprofen 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 119,
+    "text": "Patient Age: 69 years\nGender: Male\n\nExisting Conditions:\n- Insomnia\n- Ear infection\n\nCurrent Medications:\n- Omeprazole 500 mg\n- Atorvastatin 5 mg\n\nNew Drug Prescribed:\n- Lisinopril 50 mg\n\nKnown Allergies:\n- Clopidogrel"
+  },
+  {
+    "id": 120,
+    "text": "Patient Age: 69 years\nGender: Female\n\nExisting Conditions:\n- Type 2 Diabetes\n- Flu\n\nCurrent Medications:\n- Metoprolol 5 mg\n- Gabapentin 500 mg\n- Amlodipine 5 mg\n\nNew Drug Prescribed:\n- Aspirin 75 mg\n\nKnown Allergies:\n- Aspirin"
+  },
+  {
+    "id": 121,
+    "text": "Patient Age: 41 years\nGender: Female\n\nExisting Conditions:\n- Bacterial infection\n- Heart disease\n\nCurrent Medications:\n- Albuterol 100 mg\n- Paracetamol 100 mg\n- Aspirin 100 mg\n\nNew Drug Prescribed:\n- Gabapentin 50 mg\n\nKnown Allergies:\n- Omeprazole"
+  },
+  {
+    "id": 122,
+    "text": "Patient Age: 82 years\nGender: Male\n\nExisting Conditions:\n- Depression\n\nCurrent Medications:\n- Sertraline 10 mg\n- Diclofenac 5 mg\n\nNew Drug Prescribed:\n- Amoxicillin 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 123,
+    "text": "Patient Age: 37 years\nGender: Female\n\nExisting Conditions:\n- Ear infection\n\nCurrent Medications:\n- Azithromycin 50 mg\n- Losartan 50 mg\n\nNew Drug Prescribed:\n- Amlodipine 75 mg\n\nKnown Allergies:\n- Amlodipine"
+  },
+  {
+    "id": 124,
+    "text": "Patient Age: 73 years\nGender: Male\n\nExisting Conditions:\n- Type 2 Diabetes\n- Bacterial infection\n\nCurrent Medications:\n- Gabapentin 5 mg\n- Atorvastatin 10 mg\n- Amoxicillin 500 mg\n\nNew Drug Prescribed:\n- Azithromycin 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 125,
+    "text": "Patient Age: 58 years\nGender: Male\n\nExisting Conditions:\n- Type 2 Diabetes\n- Heart disease\n\nCurrent Medications:\n- Atorvastatin 500 mg\n- Sertraline 10 mg\n- Furosemide 500 mg\n\nNew Drug Prescribed:\n- Albuterol 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 126,
+    "text": "Patient Age: 55 years\nGender: Male\n\nExisting Conditions:\n- Flu\n- Anxiety\n- Heart disease\n\nCurrent Medications:\n- Albuterol 5 mg\n- Lisinopril 10 mg\n\nNew Drug Prescribed:\n- Metoprolol 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 127,
+    "text": "Patient Age: 79 years\nGender: Male\n\nExisting Conditions:\n- Bacterial infection\n\nCurrent Medications:\n- Paracetamol 100 mg\n- Omeprazole 100 mg\n\nNew Drug Prescribed:\n- Diclofenac 50 mg\n\nKnown Allergies:\n- Levothyroxine"
+  },
+  {
+    "id": 128,
+    "text": "Patient Age: 32 years\nGender: Female\n\nExisting Conditions:\n- Depression\n- Flu\n- Heart disease\n\nCurrent Medications:\n- Sertraline 100 mg\n\nNew Drug Prescribed:\n- Levothyroxine 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 129,
+    "text": "Patient Age: 49 years\nGender: Male\n\nExisting Conditions:\n- Anxiety\n- Ear infection\n- Heart disease\n\nCurrent Medications:\n- Furosemide 500 mg\n- Aspirin 50 mg\n\nNew Drug Prescribed:\n- Paracetamol 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 130,
+    "text": "Patient Age: 59 years\nGender: Male\n\nExisting Conditions:\n- Hypertension\n\nCurrent Medications:\n- Metformin 500 mg\n\nNew Drug Prescribed:\n- Azithromycin 25 mg\n\nKnown Allergies:\n- Atorvastatin"
+  },
+  {
+    "id": 131,
+    "text": "Patient Age: 57 years\nGender: Male\n\nExisting Conditions:\n- Ear infection\n\nCurrent Medications:\n- Furosemide 100 mg\n\nNew Drug Prescribed:\n- Metformin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 132,
+    "text": "Patient Age: 22 years\nGender: Male\n\nExisting Conditions:\n- Hypertension\n\nCurrent Medications:\n- Metformin 5 mg\n- Metoprolol 100 mg\n- Amoxicillin 500 mg\n\nNew Drug Prescribed:\n- Sertraline 25 mg\n\nKnown Allergies:\n- Metoprolol"
+  },
+  {
+    "id": 133,
+    "text": "Patient Age: 61 years\nGender: Male\n\nExisting Conditions:\n- Hypertension\n- Heart disease\n\nCurrent Medications:\n- Gabapentin 50 mg\n- Levothyroxine 100 mg\n\nNew Drug Prescribed:\n- Azithromycin 25 mg\n\nKnown Allergies:\n- Metoprolol"
+  },
+  {
+    "id": 134,
+    "text": "Patient Age: 74 years\nGender: Male\n\nExisting Conditions:\n- Ear infection\n- Hypertension\n\nCurrent Medications:\n- Paracetamol 100 mg\n- Gabapentin 100 mg\n\nNew Drug Prescribed:\n- Aspirin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 135,
+    "text": "Patient Age: 65 years\nGender: Female\n\nExisting Conditions:\n- Type 2 Diabetes\n\nCurrent Medications:\n- Amlodipine 5 mg\n- Warfarin 100 mg\n\nNew Drug Prescribed:\n- Paracetamol 75 mg\n\nKnown Allergies:\n- Aspirin"
+  },
+  {
+    "id": 136,
+    "text": "Patient Age: 25 years\nGender: Female\n\nExisting Conditions:\n- Insomnia\n\nCurrent Medications:\n- Gabapentin 100 mg\n- Metformin 500 mg\n\nNew Drug Prescribed:\n- Lisinopril 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 137,
+    "text": "Patient Age: 51 years\nGender: Male\n\nExisting Conditions:\n- Asthma\n\nCurrent Medications:\n- Ibuprofen 5 mg\n- Metformin 5 mg\n- Furosemide 50 mg\n\nNew Drug Prescribed:\n- Paracetamol 25 mg\n\nKnown Allergies:\n- Azithromycin"
+  },
+  {
+    "id": 138,
+    "text": "Patient Age: 75 years\nGender: Female\n\nExisting Conditions:\n- Heart disease\n- Type 2 Diabetes\n- Hypertension\n\nCurrent Medications:\n- Amoxicillin 100 mg\n- Omeprazole 500 mg\n- Sertraline 5 mg\n\nNew Drug Prescribed:\n- Diclofenac 75 mg\n\nKnown Allergies:\n- Aspirin"
+  },
+  {
+    "id": 139,
+    "text": "Patient Age: 46 years\nGender: Female\n\nExisting Conditions:\n- Asthma\n\nCurrent Medications:\n- Sertraline 500 mg\n- Aspirin 10 mg\n\nNew Drug Prescribed:\n- Amoxicillin 50 mg\n\nKnown Allergies:\n- Metformin"
+  },
+  {
+    "id": 140,
+    "text": "Patient Age: 65 years\nGender: Male\n\nExisting Conditions:\n- Anxiety\n\nCurrent Medications:\n- Omeprazole 500 mg\n\nNew Drug Prescribed:\n- Amoxicillin 50 mg\n\nKnown Allergies:\n- Levothyroxine"
+  },
+  {
+    "id": 141,
+    "text": "Patient Age: 39 years\nGender: Female\n\nExisting Conditions:\n- Asthma\n\nCurrent Medications:\n- Sertraline 100 mg\n- Diclofenac 500 mg\n- Amoxicillin 500 mg\n\nNew Drug Prescribed:\n- Furosemide 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 142,
+    "text": "Patient Age: 48 years\nGender: Male\n\nExisting Conditions:\n- Hypertension\n- Ear infection\n\nCurrent Medications:\n- Levothyroxine 10 mg\n- Metoprolol 10 mg\n\nNew Drug Prescribed:\n- Warfarin 50 mg\n\nKnown Allergies:\n- Amlodipine"
+  },
+  {
+    "id": 143,
+    "text": "Patient Age: 71 years\nGender: Female\n\nExisting Conditions:\n- Depression\n- Bacterial infection\n\nCurrent Medications:\n- Clopidogrel 10 mg\n\nNew Drug Prescribed:\n- Paracetamol 50 mg\n\nKnown Allergies:\n- Albuterol"
+  },
+  {
+    "id": 144,
+    "text": "Patient Age: 30 years\nGender: Male\n\nExisting Conditions:\n- Heart disease\n- Type 2 Diabetes\n- Asthma\n\nCurrent Medications:\n- Metoprolol 5 mg\n- Diclofenac 10 mg\n- Levothyroxine 10 mg\n\nNew Drug Prescribed:\n- Aspirin 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 145,
+    "text": "Patient Age: 23 years\nGender: Female\n\nExisting Conditions:\n- Allergies\n- Asthma\n- Type 2 Diabetes\n\nCurrent Medications:\n- Diclofenac 10 mg\n\nNew Drug Prescribed:\n- Clopidogrel 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 146,
+    "text": "Patient Age: 81 years\nGender: Female\n\nExisting Conditions:\n- Anxiety\n- Hypertension\n- Ear infection\n\nCurrent Medications:\n- Atorvastatin 5 mg\n\nNew Drug Prescribed:\n- Diclofenac 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 147,
+    "text": "Patient Age: 57 years\nGender: Female\n\nExisting Conditions:\n- Insomnia\n\nCurrent Medications:\n- Ibuprofen 5 mg\n- Diclofenac 50 mg\n- Atorvastatin 5 mg\n\nNew Drug Prescribed:\n- Warfarin 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 148,
+    "text": "Patient Age: 76 years\nGender: Male\n\nExisting Conditions:\n- Heart disease\n\nCurrent Medications:\n- Lisinopril 500 mg\n\nNew Drug Prescribed:\n- Furosemide 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 149,
+    "text": "Patient Age: 24 years\nGender: Male\n\nExisting Conditions:\n- Hypertension\n- Anxiety\n\nCurrent Medications:\n- Aspirin 5 mg\n\nNew Drug Prescribed:\n- Paracetamol 50 mg\n\nKnown Allergies:\n- Clopidogrel"
+  },
+  {
+    "id": 150,
+    "text": "Patient Age: 78 years\nGender: Male\n\nExisting Conditions:\n- Bacterial infection\n- Asthma\n- Hypertension\n\nCurrent Medications:\n- Metoprolol 100 mg\n- Levothyroxine 50 mg\n\nNew Drug Prescribed:\n- Diclofenac 50 mg\n\nKnown Allergies:\n- Paracetamol"
+  },
+  {
+    "id": 151,
+    "text": "Patient Age: 27 years\nGender: Male\n\nExisting Conditions:\n- Chronic pain\n- Depression\n\nCurrent Medications:\n- Amlodipine 10 mg\n- Atorvastatin 50 mg\n\nNew Drug Prescribed:\n- Amoxicillin 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 152,
+    "text": "Patient Age: 48 years\nGender: Male\n\nExisting Conditions:\n- Depression\n- Flu\n- Asthma\n\nCurrent Medications:\n- Diclofenac 10 mg\n- Albuterol 500 mg\n- Losartan 10 mg\n\nNew Drug Prescribed:\n- Ibuprofen 75 mg\n\nKnown Allergies:\n- Levothyroxine"
+  },
+  {
+    "id": 153,
+    "text": "Patient Age: 60 years\nGender: Female\n\nExisting Conditions:\n- Ear infection\n\nCurrent Medications:\n- Gabapentin 5 mg\n- Ibuprofen 100 mg\n- Amlodipine 100 mg\n\nNew Drug Prescribed:\n- Lisinopril 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 154,
+    "text": "Patient Age: 19 years\nGender: Female\n\nExisting Conditions:\n- Insomnia\n- Chronic pain\n\nCurrent Medications:\n- Metoprolol 5 mg\n\nNew Drug Prescribed:\n- Amoxicillin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 155,
+    "text": "Patient Age: 75 years\nGender: Male\n\nExisting Conditions:\n- Bacterial infection\n- Asthma\n\nCurrent Medications:\n- Omeprazole 10 mg\n- Diclofenac 5 mg\n\nNew Drug Prescribed:\n- Atorvastatin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 156,
+    "text": "Patient Age: 56 years\nGender: Female\n\nExisting Conditions:\n- Bacterial infection\n- Depression\n\nCurrent Medications:\n- Metoprolol 10 mg\n\nNew Drug Prescribed:\n- Amlodipine 25 mg\n\nKnown Allergies:\n- Diclofenac"
+  },
+  {
+    "id": 157,
+    "text": "Patient Age: 47 years\nGender: Female\n\nExisting Conditions:\n- Asthma\n\nCurrent Medications:\n- Diclofenac 5 mg\n- Furosemide 100 mg\n\nNew Drug Prescribed:\n- Paracetamol 75 mg\n\nKnown Allergies:\n- Sertraline"
+  },
+  {
+    "id": 158,
+    "text": "Patient Age: 62 years\nGender: Male\n\nExisting Conditions:\n- Type 2 Diabetes\n- Ear infection\n- Anxiety\n\nCurrent Medications:\n- Metoprolol 10 mg\n- Paracetamol 500 mg\n\nNew Drug Prescribed:\n- Atorvastatin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 159,
+    "text": "Patient Age: 70 years\nGender: Male\n\nExisting Conditions:\n- Anxiety\n\nCurrent Medications:\n- Furosemide 10 mg\n\nNew Drug Prescribed:\n- Amoxicillin 25 mg\n\nKnown Allergies:\n- Gabapentin"
+  },
+  {
+    "id": 160,
+    "text": "Patient Age: 25 years\nGender: Male\n\nExisting Conditions:\n- Type 2 Diabetes\n\nCurrent Medications:\n- Aspirin 100 mg\n\nNew Drug Prescribed:\n- Warfarin 25 mg\n\nKnown Allergies:\n- Gabapentin"
+  },
+  {
+    "id": 161,
+    "text": "Patient Age: 54 years\nGender: Male\n\nExisting Conditions:\n- Ear infection\n- Hypertension\n- Heart disease\n\nCurrent Medications:\n- Gabapentin 500 mg\n- Losartan 5 mg\n\nNew Drug Prescribed:\n- Levothyroxine 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 162,
+    "text": "Patient Age: 62 years\nGender: Male\n\nExisting Conditions:\n- Type 2 Diabetes\n\nCurrent Medications:\n- Sertraline 500 mg\n- Warfarin 500 mg\n\nNew Drug Prescribed:\n- Amlodipine 75 mg\n\nKnown Allergies:\n- Amoxicillin"
+  },
+  {
+    "id": 163,
+    "text": "Patient Age: 54 years\nGender: Male\n\nExisting Conditions:\n- Insomnia\n\nCurrent Medications:\n- Atorvastatin 500 mg\n\nNew Drug Prescribed:\n- Paracetamol 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 164,
+    "text": "Patient Age: 67 years\nGender: Male\n\nExisting Conditions:\n- Depression\n- Chronic pain\n- Flu\n\nCurrent Medications:\n- Omeprazole 500 mg\n- Azithromycin 10 mg\n\nNew Drug Prescribed:\n- Paracetamol 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 165,
+    "text": "Patient Age: 22 years\nGender: Female\n\nExisting Conditions:\n- Asthma\n- Depression\n\nCurrent Medications:\n- Amlodipine 5 mg\n- Lisinopril 50 mg\n\nNew Drug Prescribed:\n- Aspirin 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 166,
+    "text": "Patient Age: 46 years\nGender: Female\n\nExisting Conditions:\n- Anxiety\n- Bacterial infection\n- Chronic pain\n\nCurrent Medications:\n- Amoxicillin 500 mg\n\nNew Drug Prescribed:\n- Metoprolol 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 167,
+    "text": "Patient Age: 72 years\nGender: Male\n\nExisting Conditions:\n- Bacterial infection\n- Heart disease\n- Anxiety\n\nCurrent Medications:\n- Losartan 5 mg\n- Gabapentin 500 mg\n\nNew Drug Prescribed:\n- Amlodipine 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 168,
+    "text": "Patient Age: 74 years\nGender: Male\n\nExisting Conditions:\n- Allergies\n- Asthma\n\nCurrent Medications:\n- Clopidogrel 5 mg\n- Metoprolol 100 mg\n\nNew Drug Prescribed:\n- Albuterol 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 169,
+    "text": "Patient Age: 79 years\nGender: Female\n\nExisting Conditions:\n- Allergies\n- Flu\n- Chronic pain\n\nCurrent Medications:\n- Levothyroxine 10 mg\n- Azithromycin 5 mg\n- Warfarin 5 mg\n\nNew Drug Prescribed:\n- Amoxicillin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 170,
+    "text": "Patient Age: 45 years\nGender: Male\n\nExisting Conditions:\n- Asthma\n\nCurrent Medications:\n- Clopidogrel 5 mg\n- Omeprazole 5 mg\n\nNew Drug Prescribed:\n- Albuterol 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 171,
+    "text": "Patient Age: 67 years\nGender: Female\n\nExisting Conditions:\n- Chronic pain\n- Hypertension\n- Bacterial infection\n\nCurrent Medications:\n- Omeprazole 50 mg\n- Amoxicillin 5 mg\n\nNew Drug Prescribed:\n- Diclofenac 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 172,
+    "text": "Patient Age: 50 years\nGender: Female\n\nExisting Conditions:\n- Anxiety\n- Chronic pain\n- Allergies\n\nCurrent Medications:\n- Metformin 100 mg\n\nNew Drug Prescribed:\n- Furosemide 75 mg\n\nKnown Allergies:\n- Diclofenac"
+  },
+  {
+    "id": 173,
+    "text": "Patient Age: 74 years\nGender: Male\n\nExisting Conditions:\n- Anxiety\n- Insomnia\n- Hypertension\n\nCurrent Medications:\n- Gabapentin 500 mg\n\nNew Drug Prescribed:\n- Metoprolol 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 174,
+    "text": "Patient Age: 70 years\nGender: Female\n\nExisting Conditions:\n- Heart disease\n- Allergies\n\nCurrent Medications:\n- Azithromycin 100 mg\n- Levothyroxine 500 mg\n- Gabapentin 5 mg\n\nNew Drug Prescribed:\n- Lisinopril 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 175,
+    "text": "Patient Age: 79 years\nGender: Female\n\nExisting Conditions:\n- Anxiety\n- Insomnia\n\nCurrent Medications:\n- Paracetamol 500 mg\n\nNew Drug Prescribed:\n- Levothyroxine 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 176,
+    "text": "Patient Age: 25 years\nGender: Female\n\nExisting Conditions:\n- Heart disease\n\nCurrent Medications:\n- Furosemide 5 mg\n- Paracetamol 10 mg\n- Amlodipine 10 mg\n\nNew Drug Prescribed:\n- Losartan 25 mg\n\nKnown Allergies:\n- Warfarin"
+  },
+  {
+    "id": 177,
+    "text": "Patient Age: 79 years\nGender: Female\n\nExisting Conditions:\n- Anxiety\n- Ear infection\n\nCurrent Medications:\n- Paracetamol 50 mg\n\nNew Drug Prescribed:\n- Amlodipine 25 mg\n\nKnown Allergies:\n- Diclofenac"
+  },
+  {
+    "id": 178,
+    "text": "Patient Age: 68 years\nGender: Female\n\nExisting Conditions:\n- Allergies\n\nCurrent Medications:\n- Diclofenac 50 mg\n- Ibuprofen 100 mg\n- Warfarin 10 mg\n\nNew Drug Prescribed:\n- Metoprolol 50 mg\n\nKnown Allergies:\n- Clopidogrel"
+  },
+  {
+    "id": 179,
+    "text": "Patient Age: 29 years\nGender: Female\n\nExisting Conditions:\n- Hypertension\n\nCurrent Medications:\n- Diclofenac 50 mg\n- Albuterol 10 mg\n\nNew Drug Prescribed:\n- Losartan 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 180,
+    "text": "Patient Age: 21 years\nGender: Male\n\nExisting Conditions:\n- Bacterial infection\n\nCurrent Medications:\n- Sertraline 500 mg\n- Amoxicillin 500 mg\n- Levothyroxine 10 mg\n\nNew Drug Prescribed:\n- Warfarin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 181,
+    "text": "Patient Age: 63 years\nGender: Female\n\nExisting Conditions:\n- Allergies\n- Anxiety\n\nCurrent Medications:\n- Aspirin 10 mg\n- Ibuprofen 500 mg\n\nNew Drug Prescribed:\n- Diclofenac 25 mg\n\nKnown Allergies:\n- Aspirin"
+  },
+  {
+    "id": 182,
+    "text": "Patient Age: 63 years\nGender: Female\n\nExisting Conditions:\n- Heart disease\n- Allergies\n\nCurrent Medications:\n- Losartan 500 mg\n- Clopidogrel 100 mg\n\nNew Drug Prescribed:\n- Atorvastatin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 183,
+    "text": "Patient Age: 25 years\nGender: Female\n\nExisting Conditions:\n- Hypertension\n- Heart disease\n- Asthma\n\nCurrent Medications:\n- Furosemide 500 mg\n\nNew Drug Prescribed:\n- Lisinopril 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 184,
+    "text": "Patient Age: 28 years\nGender: Male\n\nExisting Conditions:\n- Flu\n- Asthma\n- Heart disease\n\nCurrent Medications:\n- Paracetamol 500 mg\n- Clopidogrel 5 mg\n\nNew Drug Prescribed:\n- Gabapentin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 185,
+    "text": "Patient Age: 85 years\nGender: Male\n\nExisting Conditions:\n- Heart disease\n- Depression\n- Allergies\n\nCurrent Medications:\n- Losartan 50 mg\n\nNew Drug Prescribed:\n- Clopidogrel 50 mg\n\nKnown Allergies:\n- Paracetamol"
+  },
+  {
+    "id": 186,
+    "text": "Patient Age: 36 years\nGender: Male\n\nExisting Conditions:\n- Hypertension\n- Asthma\n\nCurrent Medications:\n- Omeprazole 5 mg\n- Warfarin 5 mg\n\nNew Drug Prescribed:\n- Amoxicillin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 187,
+    "text": "Patient Age: 52 years\nGender: Male\n\nExisting Conditions:\n- Depression\n- Hypertension\n- Allergies\n\nCurrent Medications:\n- Omeprazole 500 mg\n- Ibuprofen 100 mg\n- Paracetamol 50 mg\n\nNew Drug Prescribed:\n- Metoprolol 25 mg\n\nKnown Allergies:\n- Furosemide"
+  },
+  {
+    "id": 188,
+    "text": "Patient Age: 76 years\nGender: Male\n\nExisting Conditions:\n- Heart disease\n\nCurrent Medications:\n- Paracetamol 5 mg\n- Clopidogrel 50 mg\n\nNew Drug Prescribed:\n- Losartan 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 189,
+    "text": "Patient Age: 55 years\nGender: Male\n\nExisting Conditions:\n- Asthma\n- Allergies\n- Type 2 Diabetes\n\nCurrent Medications:\n- Amoxicillin 10 mg\n- Albuterol 500 mg\n\nNew Drug Prescribed:\n- Losartan 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 190,
+    "text": "Patient Age: 61 years\nGender: Male\n\nExisting Conditions:\n- Asthma\n\nCurrent Medications:\n- Azithromycin 100 mg\n- Albuterol 500 mg\n\nNew Drug Prescribed:\n- Gabapentin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 191,
+    "text": "Patient Age: 50 years\nGender: Female\n\nExisting Conditions:\n- Depression\n- Bacterial infection\n- Asthma\n\nCurrent Medications:\n- Omeprazole 100 mg\n\nNew Drug Prescribed:\n- Lisinopril 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 192,
+    "text": "Patient Age: 78 years\nGender: Male\n\nExisting Conditions:\n- Anxiety\n- Bacterial infection\n\nCurrent Medications:\n- Gabapentin 100 mg\n\nNew Drug Prescribed:\n- Paracetamol 75 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 193,
+    "text": "Patient Age: 65 years\nGender: Female\n\nExisting Conditions:\n- Hypertension\n- Insomnia\n- Type 2 Diabetes\n\nCurrent Medications:\n- Losartan 500 mg\n- Paracetamol 100 mg\n- Lisinopril 500 mg\n\nNew Drug Prescribed:\n- Albuterol 50 mg\n\nKnown Allergies:\n- Diclofenac"
+  },
+  {
+    "id": 194,
+    "text": "Patient Age: 48 years\nGender: Female\n\nExisting Conditions:\n- Insomnia\n\nCurrent Medications:\n- Amoxicillin 10 mg\n- Ibuprofen 500 mg\n- Levothyroxine 500 mg\n\nNew Drug Prescribed:\n- Gabapentin 50 mg\n\nKnown Allergies:\n- Atorvastatin"
+  },
+  {
+    "id": 195,
+    "text": "Patient Age: 75 years\nGender: Male\n\nExisting Conditions:\n- Hypertension\n\nCurrent Medications:\n- Albuterol 50 mg\n- Levothyroxine 5 mg\n\nNew Drug Prescribed:\n- Amlodipine 75 mg\n\nKnown Allergies:\n- Azithromycin"
+  },
+  {
+    "id": 196,
+    "text": "Patient Age: 82 years\nGender: Female\n\nExisting Conditions:\n- Bacterial infection\n\nCurrent Medications:\n- Gabapentin 5 mg\n- Furosemide 500 mg\n- Amlodipine 100 mg\n\nNew Drug Prescribed:\n- Amoxicillin 75 mg\n\nKnown Allergies:\n- Aspirin"
+  },
+  {
+    "id": 197,
+    "text": "Patient Age: 53 years\nGender: Female\n\nExisting Conditions:\n- Flu\n\nCurrent Medications:\n- Sertraline 500 mg\n- Amoxicillin 5 mg\n\nNew Drug Prescribed:\n- Losartan 50 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 198,
+    "text": "Patient Age: 72 years\nGender: Female\n\nExisting Conditions:\n- Bacterial infection\n- Depression\n\nCurrent Medications:\n- Losartan 50 mg\n- Amoxicillin 10 mg\n- Omeprazole 10 mg\n\nNew Drug Prescribed:\n- Warfarin 25 mg\n\nKnown Allergies:\n- None"
+  },
+  {
+    "id": 199,
+    "text": "Patient Age: 27 years\nGender: Male\n\nExisting Conditions:\n- Ear infection\n- Chronic pain\n- Type 2 Diabetes\n\nCurrent Medications:\n- Metoprolol 50 mg\n- Albuterol 100 mg\n- Paracetamol 5 mg\n\nNew Drug Prescribed:\n- Amlodipine 25 mg\n\nKnown Allergies:\n- Omeprazole"
+  },
+  {
+    "id": 200,
+    "text": "Patient Age: 36 years\nGender: Male\n\nExisting Conditions:\n- Heart disease\n\nCurrent Medications:\n- Metformin 10 mg\n- Lisinopril 10 mg\n- Diclofenac 500 mg\n\nNew Drug Prescribed:\n- Azithromycin 50 mg\n\nKnown Allergies:\n- None"
+  }
+]

@@ -49,7 +49,8 @@ class RecommendationService:
 
         # 2. Identify drugs with interaction risks
         for interaction in drug_interactions:
-            if interaction.interaction != "no known interaction":
+            # Skip if interaction is "no known interaction" or "safe"
+            if interaction.interaction.lower() not in ["no known interaction", "safe"]:
                 issue = f"Interaction risk: {interaction.interaction}"
                 for drug in interaction.drug_pair:
                     # We flag both drugs in the interaction

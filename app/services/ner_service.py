@@ -48,6 +48,25 @@ class NERService:
         new_drug_match = re.search(r"New Drug Prescribed:\s*-?\s*(.*)", text)
         if new_drug_match:
             new_drug_name = new_drug_match.group(1).strip().lower()
+
+        # Explicitly extract conditions and allergies from the text sections
+        conditions_match = re.search(r"Existing Conditions:\s*(.*?)(?:\n\n|\n[A-Z]|$)", text, re.DOTALL | re.IGNORECASE)
+        if conditions_match:
+            conditions_text = conditions_match.group(1).strip()
+            # Split by commas or newlines/bullets
+            for cond in re.split(r'[,\n-]', conditions_text):
+                c = cond.strip().strip("- ")
+                if c and len(c) > 2:
+                    diseases.append(c)
+
+        allergies_match = re.search(r"Known Allergies:\s*(.*?)(?:\n\n|\n[A-Z]|$)", text, re.DOTALL | re.IGNORECASE)
+        if allergies_match:
+            allergies_text = allergies_match.group(1).strip()
+            if allergies_text.lower() != "none":
+                for alg in re.split(r'[,\n-]', allergies_text):
+                    a = alg.strip().strip("- ")
+                    if a and len(a) > 2:
+                        allergies.append(a)
         
         # Map labels and merge subword tokens
         processed_results = []

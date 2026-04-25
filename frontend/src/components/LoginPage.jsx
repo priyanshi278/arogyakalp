@@ -46,34 +46,40 @@ const LoginPage = ({ onLogin }) => {
   };
 
   return (
-    <div className="auth-container">
-      <div className="auth-card animate-fade-up">
-        <div className="auth-header">
-          <h1>ArogyaKalp</h1>
-          <p style={{ color: 'var(--color-text-muted)' }}>Doctor Portal Access</p>
+    <div className="auth-wrapper fade-in">
+      <div className="auth-panel glass-panel section-card">
+        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          <h2 className="brand-font" style={{ fontSize: '1.5rem', color: 'var(--medical-slate)', marginBottom: '0.25rem' }}>
+            AROGYAKALP MEDICAL
+          </h2>
+          <p style={{ color: 'var(--medical-slate-muted)', fontSize: '0.875rem', fontWeight: '500' }}>
+            Clinical Portal Access
+          </p>
         </div>
 
-        <div className="auth-toggle">
+        <div className="medical-tabs">
           <button 
-            className={isLogin ? 'active' : ''} 
+            className={`medical-tab ${isLogin ? 'active' : ''}`}
             onClick={() => setIsLogin(true)}
+            type="button"
           >
             Login
           </button>
           <button 
-            className={!isLogin ? 'active' : ''} 
+            className={`medical-tab ${!isLogin ? 'active' : ''}`}
             onClick={() => setIsLogin(false)}
+            type="button"
           >
-            Signup
+            Sign Up
           </button>
         </div>
 
-        <form onSubmit={handleSubmit}>
-          <div className="form-group" style={{ marginBottom: '1.5rem' }}>
-            <label>IMR Number</label>
+        <form onSubmit={handleSubmit} className="assessment-form">
+          <div className="form-field">
+            <span className="field-label">IMR Number</span>
             <input 
               type="text" 
-              className="input" 
+              className="medical-input" 
               placeholder="e.g. IMR-12345"
               value={formData.imr_number}
               onChange={(e) => setFormData({...formData, imr_number: e.target.value})}
@@ -82,11 +88,11 @@ const LoginPage = ({ onLogin }) => {
           </div>
 
           {!isLogin && (
-            <div className="form-group" style={{ marginBottom: '1.5rem' }}>
-              <label>Full Name</label>
+            <div className="form-field">
+              <span className="field-label">Full Name</span>
               <input 
                 type="text" 
-                className="input" 
+                className="medical-input" 
                 placeholder="Dr. John Doe"
                 value={formData.name}
                 onChange={(e) => setFormData({...formData, name: e.target.value})}
@@ -95,11 +101,11 @@ const LoginPage = ({ onLogin }) => {
             </div>
           )}
 
-          <div className="form-group" style={{ marginBottom: '2rem' }}>
-            <label>Phone Number</label>
+          <div className="form-field" style={{ marginBottom: '0.5rem' }}>
+            <span className="field-label">Phone Number</span>
             <input 
               type="tel" 
-              className="input" 
+              className="medical-input" 
               placeholder="e.g. +91 9876543210"
               value={formData.phone_number}
               onChange={(e) => setFormData({...formData, phone_number: e.target.value})}
@@ -108,23 +114,28 @@ const LoginPage = ({ onLogin }) => {
           </div>
 
           {error && (
-            <div style={{ color: '#ef4444', marginBottom: '1.5rem', fontSize: '0.9rem', textAlign: 'center' }}>
+            <div className="risk-alert-banner" style={{ background: 'var(--warning)', padding: '0.75rem', fontSize: '0.875rem', margin: '0.5rem 0', position: 'relative' }}>
               {error}
             </div>
           )}
 
           <button 
             type="submit" 
-            className="btn btn-primary" 
-            style={{ width: '100%', padding: '1rem' }}
+            className="btn-med btn-primary" 
+            style={{ width: '100%', marginTop: '1rem', padding: '0.75rem' }}
             disabled={isLoading}
           >
-            {isLoading ? 'Processing...' : (isLogin ? 'Login' : 'Create Account')}
+            {isLoading ? (
+              <>
+                <div className="spinner" style={{ width: '1rem', height: '1rem', borderWidth: '2px' }}></div>
+                Processing...
+              </>
+            ) : (isLogin ? 'Secure Login' : 'Register Provider')}
           </button>
         </form>
 
-        <div className="auth-footer">
-          <p>© 2026 ArogyaKalp AI • Medical Verification Required</p>
+        <div style={{ textAlign: 'center', marginTop: '2rem', fontSize: '0.75rem', color: '#94a3b8', letterSpacing: '0.5px' }}>
+          &copy; 2026 ArogyaKalp AI &bull; Encrypted Portal
         </div>
       </div>
     </div>

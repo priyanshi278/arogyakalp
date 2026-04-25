@@ -1,201 +1,240 @@
-drug_name,side_effect
-paracetamol,stomach upset
-albuterol,nausea
-gabapentin,diarrhea
-furosemide,headache
-sertraline,nausea
-losartan,constipation
-azithromycin,stomach upset
-diclofenac,insomnia
-losartan,fatigue
-ibuprofen,blurred vision
-amoxicillin,stomach upset
-gabapentin,headache
-omeprazole,constipation
-levothyroxine,anxiety
-metformin,constipation
-metformin,dizziness
-losartan,fatigue
-albuterol,weight gain
-omeprazole,joint swelling
-omeprazole,blurred vision
-furosemide,nausea
-azithromycin,blurred vision
-levothyroxine,dry mouth
-warfarin,insomnia
-aspirin,fatigue
-furosemide,joint swelling
-gabapentin,muscle pain
-gabapentin,fatigue
-amoxicillin,weight gain
-atorvastatin,stomach upset
-atorvastatin,blurred vision
-warfarin,dizziness
-lisinopril,dry mouth
-amlodipine,weight gain
-aspirin,weight gain
-warfarin,constipation
-atorvastatin,diarrhea
-azithromycin,diarrhea
-losartan,dizziness
-furosemide,diarrhea
-clopidogrel,dry mouth
-omeprazole,diarrhea
-aspirin,joint swelling
-atorvastatin,constipation
-metoprolol,anxiety
-warfarin,nausea
-amoxicillin,diarrhea
-metformin,dry mouth
-metformin,stomach upset
-warfarin,rash
-losartan,muscle pain
-metformin,nausea
-amlodipine,anxiety
-metoprolol,joint swelling
-losartan,diarrhea
-ibuprofen,joint swelling
-azithromycin,fatigue
-warfarin,dry mouth
-levothyroxine,anxiety
-omeprazole,headache
-amoxicillin,nausea
-metformin,diarrhea
-albuterol,anxiety
-omeprazole,constipation
-omeprazole,muscle pain
-clopidogrel,anxiety
-sertraline,fatigue
-amoxicillin,dizziness
-aspirin,diarrhea
-lisinopril,blurred vision
-albuterol,weight gain
-clopidogrel,dry mouth
-aspirin,diarrhea
-azithromycin,blurred vision
-ibuprofen,joint swelling
-atorvastatin,muscle pain
-omeprazole,joint swelling
-ibuprofen,fatigue
-metoprolol,joint swelling
-levothyroxine,dizziness
-furosemide,fatigue
-albuterol,headache
-diclofenac,diarrhea
-warfarin,joint swelling
-sertraline,fatigue
-losartan,nausea
-losartan,anxiety
-levothyroxine,muscle pain
-amoxicillin,nausea
-omeprazole,nausea
-omeprazole,nausea
-lisinopril,headache
-warfarin,rash
-amoxicillin,weight gain
-omeprazole,anxiety
-atorvastatin,dizziness
-amoxicillin,anxiety
-warfarin,dry mouth
-warfarin,weight gain
-amoxicillin,insomnia
-atorvastatin,blurred vision
-warfarin,headache
-furosemide,insomnia
-levothyroxine,dry mouth
-warfarin,diarrhea
-amoxicillin,fatigue
-albuterol,blurred vision
-warfarin,weight gain
-furosemide,dizziness
-metoprolol,headache
-diclofenac,rash
-furosemide,nausea
-clopidogrel,weight gain
-aspirin,dry mouth
-clopidogrel,dry mouth
-metoprolol,muscle pain
-atorvastatin,fatigue
-ibuprofen,anxiety
-sertraline,constipation
-clopidogrel,weight gain
-furosemide,anxiety
-ibuprofen,anxiety
-sertraline,dizziness
-amoxicillin,fatigue
-lisinopril,rash
-metformin,diarrhea
-paracetamol,muscle pain
-amlodipine,stomach upset
-amlodipine,joint swelling
-warfarin,insomnia
-clopidogrel,dizziness
-warfarin,diarrhea
-paracetamol,dizziness
-aspirin,weight gain
-omeprazole,diarrhea
-azithromycin,muscle pain
-warfarin,insomnia
-diclofenac,diarrhea
-lisinopril,fatigue
-diclofenac,fatigue
-atorvastatin,diarrhea
-losartan,diarrhea
-aspirin,headache
-sertraline,anxiety
-gabapentin,dizziness
-furosemide,stomach upset
-metformin,weight gain
-azithromycin,stomach upset
-amlodipine,dry mouth
-clopidogrel,muscle pain
-metformin,weight gain
-omeprazole,diarrhea
-amlodipine,nausea
-sertraline,weight gain
-diclofenac,rash
-metformin,nausea
-omeprazole,dizziness
-amoxicillin,joint swelling
-losartan,insomnia
-clopidogrel,rash
-paracetamol,diarrhea
-omeprazole,muscle pain
-metoprolol,nausea
-gabapentin,fatigue
-levothyroxine,constipation
-levothyroxine,diarrhea
-ibuprofen,anxiety
-levothyroxine,anxiety
-azithromycin,fatigue
-diclofenac,joint swelling
-albuterol,weight gain
-azithromycin,blurred vision
-atorvastatin,dizziness
-losartan,headache
-amlodipine,blurred vision
-clopidogrel,headache
-clopidogrel,rash
-aspirin,muscle pain
-gabapentin,stomach upset
-aspirin,dry mouth
-losartan,dry mouth
-losartan,anxiety
-amoxicillin,diarrhea
-lisinopril,weight gain
-amoxicillin,rash
-paracetamol,headache
-metformin,insomnia
-omeprazole,rash
-albuterol,dizziness
-aspirin,dizziness
-metoprolol,stomach upset
-furosemide,headache
-furosemide,nausea
-losartan,joint swelling
-azithromycin,anxiety
-furosemide,joint swelling
-omeprazole,headache
-warfarin,anxiety
-warfarin,dizziness
-albuterol,weight gain
+drug_name,side_effect,severity
+warfarin,major bleeding,serious
+warfarin,intracranial hemorrhage,serious
+warfarin,gastrointestinal bleeding,serious
+ibuprofen,gastrointestinal bleeding,serious
+ibuprofen,acute kidney injury,serious
+ibuprofen,peptic ulcer perforation,serious
+diclofenac,gastrointestinal bleeding,serious
+diclofenac,acute kidney injury,serious
+diclofenac,hepatic injury,serious
+aspirin,major bleeding,serious
+aspirin,gastrointestinal bleeding,serious
+clopidogrel,major bleeding,serious
+clopidogrel,thrombocytopenia,serious
+metformin,lactic acidosis,serious
+metformin,severe hypoglycemia (rare),serious
+atorvastatin,rhabdomyolysis,serious
+atorvastatin,hepatotoxicity,serious
+paracetamol,acute liver failure,serious
+paracetamol,severe allergic reaction,serious
+amoxicillin,anaphylaxis,serious
+amoxicillin,severe skin reaction (stevens-johnson syndrome),serious
+azithromycin,prolonged qt interval,serious
+azithromycin,cardiac arrhythmia,serious
+lisinopril,angioedema,serious
+lisinopril,hyperkalemia,serious
+losartan,hyperkalemia,serious
+losartan,renal impairment,serious
+furosemide,severe dehydration,serious
+furosemide,electrolyte imbalance,serious
+gabapentin,respiratory depression,serious
+sertraline,serotonin syndrome,serious
+sertraline,suicidal ideation,serious
+omeprazole,clostridium difficile infection,serious
+levothyroxine,cardiac arrhythmia,serious
+albuterol,severe tachycardia,serious
+paracetamol,skin rash,moderate
+paracetamol,nausea and vomiting,moderate
+ibuprofen,gastric irritation,moderate
+ibuprofen,fluid retention,moderate
+diclofenac,gastric irritation,moderate
+diclofenac,elevated liver enzymes,moderate
+aspirin,indigestion,moderate
+aspirin,bruising tendency,moderate
+metformin,vitamin b12 deficiency,moderate
+metformin,diarrhea,moderate
+atorvastatin,muscle pain,moderate
+atorvastatin,elevated liver enzymes,moderate
+amlodipine,peripheral edema,moderate
+amlodipine,flushing sensation,moderate
+lisinopril,dizziness,moderate
+lisinopril,hypotension,moderate
+losartan,dizziness,moderate
+losartan,low blood pressure,moderate
+furosemide,dehydration,moderate
+furosemide,low potassium levels,moderate
+gabapentin,loss of coordination,moderate
+gabapentin,somnolence,moderate
+sertraline,sexual dysfunction,moderate
+sertraline,restlessness,moderate
+omeprazole,low magnesium levels,moderate
+omeprazole,vitamin b12 deficiency,moderate
+levothyroxine,weight loss,moderate
+levothyroxine,anxiety,moderate
+albuterol,palpitations,moderate
+albuterol,increased blood pressure,moderate
+amoxicillin,moderate allergic reaction,moderate
+azithromycin,abdominal pain,moderate
+clopidogrel,moderate bleeding,moderate
+paracetamol,headache,common
+paracetamol,nausea,common
+ibuprofen,nausea,common
+ibuprofen,headache,common
+diclofenac,nausea,common
+diclofenac,headache,common
+aspirin,nausea,common
+aspirin,heartburn,common
+metformin,nausea,common
+metformin,abdominal discomfort,common
+atorvastatin,headache,common
+atorvastatin,diarrhea,common
+amlodipine,headache,common
+amlodipine,dizziness,common
+sertraline,nausea,common
+sertraline,insomnia,common
+lisinopril,dry cough,common
+lisinopril,headache,common
+losartan,headache,common
+losartan,fatigue,common
+furosemide,frequent urination,common
+furosemide,dizziness,common
+gabapentin,dizziness,common
+gabapentin,fatigue,common
+omeprazole,headache,common
+omeprazole,abdominal pain,common
+levothyroxine,palpitations,common
+levothyroxine,heat intolerance,common
+albuterol,tremor,common
+albuterol,nervousness,common
+amoxicillin,diarrhea,common
+amoxicillin,skin rash,common
+azithromycin,nausea,common
+azithromycin,diarrhea,common
+clopidogrel,bruising,common
+amiodarone,pulmonary fibrosis,serious
+amiodarone,corneal microdeposits,common
+amiodarone,blue-gray skin discoloration,moderate
+prednisone,hyperglycemia,moderate
+prednisone,osteoporosis,serious
+prednisone,cushingoid features,moderate
+prednisone,glaucoma,serious
+methotrexate,myelosuppression,serious
+methotrexate,hepatotoxicity,serious
+methotrexate,stomatitis,common
+lithium,fine tremor,common
+lithium,nephrogenic diabetes insipidus,serious
+lithium,hypothyroidism,moderate
+lithium,weight gain,common
+lithium,polyuria,common
+vancomycin,red man syndrome,moderate
+vancomycin,nephrotoxicity,serious
+gentamicin,ototoxicity,serious
+gentamicin,nephrotoxicity,serious
+phenytoin,gingival hyperplasia,moderate
+phenytoin,nystagmus,common
+phenytoin,ataxia,moderate
+carbamazepine,hyponatremia,moderate
+carbamazepine,leukopenia,serious
+carbamazepine,diplopia,common
+valproate,hepatotoxicity,serious
+valproate,pancreatitis,serious
+valproate,weight gain,common
+valproate,alopecia,common
+digoxin,visual disturbances (yellow halos),moderate
+digoxin,bradycardia,serious
+furosemide,ototoxicity,serious
+furosemide,hyperuricemia,moderate
+spironolactone,gynecomastia,common
+spironolactone,hyperkalemia,serious
+hydrochlorothiazide,hypokalemia,moderate
+hydrochlorothiazide,hyperglycemia,moderate
+clonidine,dry mouth,common
+clonidine,sedation,common
+clonidine,rebound hypertension,serious
+nitroglycerin,throbbing headache,common
+nitroglycerin,orthostatic hypotension,moderate
+sildenafil,blue-tinted vision,common
+sildenafil,priapism,serious
+theophylline,seizures,serious
+theophylline,arrhythmia,serious
+quetiapine,somnolence,common
+quetiapine,weight gain,common
+quetiapine,extrapyramidal symptoms,moderate
+haloperidol,extrapyramidal symptoms,common
+haloperidol,tardive dyskinesia,serious
+haloperidol,neuroleptic malignant syndrome,serious
+venlafaxine,hypertension,moderate
+venlafaxine,nausea,common
+paroxetine,discontinuation syndrome,moderate
+citalopram,qt prolongation,serious
+escitalopram,qt prolongation,serious
+trimethoprim,hyperkalemia,moderate
+trimethoprim,megaloblastic anemia,serious
+ciprofloxacin,tendon rupture,serious
+ciprofloxacin,phototoxicity,moderate
+linezolid,myelosuppression,serious
+linezolid,peripheral neuropathy,serious
+rifampin,orange discoloration of body fluids,common
+rifampin,hepatotoxicity,serious
+allopurinol,hypersensitivity syndrome,serious
+allopurinol,rash,common
+azathioprine,bone marrow suppression,serious
+ciclosporin,nephrotoxicity,serious
+ciclosporin,hypertension,moderate
+ciclosporin,gingival hyperplasia,moderate
+tacrolimus,nephrotoxicity,serious
+tacrolimus,hyperglycemia,moderate
+st_johns_wort,photosensitivity,moderate
+clozapine,agranulocytosis,serious
+clozapine,myocarditis,serious
+clozapine,seizures,serious
+topiramate,cognitive slowing,moderate
+topiramate,nephrolithiasis,serious
+lamotrigine,stevens-johnson syndrome,serious
+levofloxacin,tendonitis,serious
+moxifloxacin,qt prolongation,serious
+warfarin,skin necrosis,serious
+heparin,thrombocytopenia,serious
+enoxaparin,injection site hematoma,common
+aspirin,tinnitus,common
+aspirin,reye syndrome,serious
+metoprolol,bradycardia,moderate
+metoprolol,fatigue,common
+propranolol,bronchospasm,serious
+atenolol,cold extremities,common
+lisinopril,cough,common
+enalapril,renal impairment,serious
+valsartan,hyperkalemia,serious
+atorvastatin,myalgia,common
+simvastatin,myopathy,moderate
+ezetimibe,diarrhea,common
+amiodarone,thyroid dysfunction,serious
+celecoxib,gi bleeding,serious
+celecoxib,peripheral edema,common
+meloxicam,gastritis,moderate
+naproxen,fluid retention,moderate
+apixaban,hematuria,moderate
+rivaroxaban,epistaxis,common
+dabigatran,dyspepsia,common
+edoxaban,anemia,moderate
+sitagliptin,upper respiratory tract infection,common
+sitagliptin,nasopharyngitis,common
+linagliptin,pancreatitis,serious
+vildagliptin,headache,common
+empagliflozin,urinary tract infection,common
+empagliflozin,genital mycotic infection,common
+dapagliflozin,hypovolemia,moderate
+canagliflozin,bone fractures,serious
+quetiapine,metabolic syndrome,serious
+quetiapine,dry mouth,common
+olanzapine,weight gain,common
+olanzapine,sedation,common
+risperidone,hyperprolactinemia,moderate
+risperidone,insomnia,common
+clozapine,sialorrhea,common
+clozapine,constipation,common
+haloperidol,dystonia,serious
+haloperidol,akathisia,moderate
+moxifloxacin,dysgeusia,common
+levofloxacin,dizziness,common
+linezolid,thrombocytopenia,serious
+piperacillin,diarrhea,common
+meropenem,seizures,serious
+metronidazole,metallic taste,common
+metronidazole,peripheral neuropathy,serious
+fluoxetine,anxiety,common
+citalopram,dry mouth,common
+escitalopram,sweating,common
+bupropion,insomnia,common
+mirtazapine,weight gain,common

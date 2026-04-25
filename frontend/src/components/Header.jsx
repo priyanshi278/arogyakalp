@@ -2,39 +2,47 @@ import React from 'react';
 
 const Header = ({ user, onLogout }) => {
   return (
-    <header className="header animate-fade-down" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-      <div>
-        <h1 className="h1">ArogyaKalp</h1>
-        <p className="p" style={{ color: 'var(--color-text-muted)', marginTop: '0.25rem' }}>
-          AI Clinical Decision Support System
-        </p>
-        <div className="badge badge-info" style={{ marginTop: '1rem' }}>
-          Smart Drug Safety & Recommendation Assistant
+    <nav className="app-nav glass-panel" style={{ margin: '1rem', marginTop: '1rem' }}>
+      <div className="brand">
+        <div className="brand-dot"></div>
+        <div>
+          <h1>ArogyaKalp</h1>
+          <p style={{ fontSize: '0.7rem', color: '#94a3b8', letterSpacing: '1px' }}>AI CLINICAL DECISION SUPPORT</p>
         </div>
       </div>
-      
-      {user && (
-        <div style={{ textAlign: 'right' }}>
-          <div style={{ fontWeight: '600', color: 'var(--color-primary)' }}>
-            Dr. {user.name}
-          </div>
-          <button 
-            onClick={onLogout}
-            style={{ 
-              background: 'none', 
-              border: 'none', 
-              color: 'var(--color-text-muted)', 
-              fontSize: '0.8rem', 
-              cursor: 'pointer',
-              padding: '0',
-              textDecoration: 'underline'
-            }}
-          >
-            Logout
-          </button>
+
+      <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
+        <div className="badge badge-info" style={{ borderRadius: '8px', fontSize: '0.75rem' }}>
+          Smart Drug Safety & Recommendation Assistant
         </div>
-      )}
-    </header>
+        
+        {user && (
+          <div className="user-profile">
+            <div className="avatar">
+              {user.name.charAt(0).toUpperCase()}
+            </div>
+            <div style={{ textAlign: 'left' }}>
+              <div style={{ fontWeight: '600', fontSize: '0.9rem' }}>
+                Dr. {user.name}
+              </div>
+              <button 
+                onClick={onLogout}
+                style={{ 
+                  background: 'none', 
+                  border: 'none', 
+                  color: '#94a3b8', 
+                  fontSize: '0.75rem', 
+                  cursor: 'pointer',
+                  padding: '0'
+                }}
+              >
+                Logout
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
   );
 };
 

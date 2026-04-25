@@ -102,42 +102,49 @@ function App() {
   const showDangerBanner = data?.drug_interactions?.some(i => 
     i.interaction.toLowerCase().match(/danger|severe|warning|fatal/)
   );
+  
+  const showResults = data || isLoading || error;
 
   if (!user) {
     return <LoginPage onLogin={handleLogin} />;
   }
 
   return (
-    <div className="container">
+    <div className="container fade-in">
       <Header user={user} onLogout={handleLogout} />
       
-      {showDangerBanner && (
-        <div 
-          className="badge badge-danger animate-fade-up" 
-          style={{ width: '100%', padding: '1rem', marginBottom: '1rem', fontSize: '1rem', textAlign: 'center' }}
-        >
-          🚨 HIGH RISK INTERACTION DETECTED - VIEW SAFETY WARNINGS BELOW
-        </div>
-      )}
+      <div className={showResults ? "main-grid" : "center-grid"}>
+          <div className={showResults ? "left-panel" : "center-panel"}>
+            <InputSection 
+                patientInfo={patientInfo} 
+                setPatientInfo={setPatientInfo} 
+                onAnalyze={handleAnalyze} 
+                isLoading={isLoading} 
+                onReset={handleReset}
+            />
+          </div>
+          
+          {showResults && (
+            <div className="right-panel fade-in">
+              {showDangerBanner && (
+                <div className="risk-alert-banner">
+                  ⚠️ HIGH RISK INTERACTION DETECTED
+                </div>
+              )}
 
-      {error && (
-        <div className="badge badge-danger" style={{ width: '100%', padding: '1rem', marginBottom: '1.5rem', textAlign: 'center' }}>
-          {error}
-        </div>
-      )}
+              {error && (
+                <div className="risk-alert-banner" style={{ background: 'var(--warning)', animation: 'none' }}>
+                  {error}
+                </div>
+              )}
 
-      <InputSection 
-        patientInfo={patientInfo} 
-        setPatientInfo={setPatientInfo} 
-        onAnalyze={handleAnalyze} 
-        isLoading={isLoading} 
-        onReset={handleReset}
-      />
+              <Results data={data} chatResponse={chatResponse} isLoading={isLoading} />
+            </div>
+          )}
+      </div>
 
-      <Results data={data} chatResponse={chatResponse} isLoading={isLoading} />
-
-      <footer style={{ marginTop: 'auto', textAlign: 'center', padding: '2rem', color: 'var(--color-text-muted)', fontSize: '0.8rem' }}>
-        &copy; 2026 ArogyaKalp AI • For Educational Use Only • Always Consult a Professional
+      <footer style={{ marginTop: 'auto', textAlign: 'center', padding: '2rem 2rem 1rem', color: '#94a3b8', fontSize: '0.75rem', letterSpacing: '1px' }}>
+        &copy; 2026 AROGYAKALP AI CLINICAL SYSTEMS • ENCRYPTED MEDICAL SESSION • VERSION 3.2.0 CDSS
       </footer>
     </div>
   );

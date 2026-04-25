@@ -1,33 +1,188 @@
-drug_name,alternative,condition
-paracetamol,ibuprofen,fever
-ibuprofen,acetaminophen,pain
-amoxicillin,azithromycin,infection
-aspirin,clopidogrel,heart
-clopidogrel,aspirin,heart
-acetaminophen,paracetamol,fever
-azithromycin,amoxicillin,infection
-lipitor,simvastatin,cholesterol
-simvastatin,lipitor,cholesterol
-metformin,glipizide,diabetes
-glipizide,metformin,diabetes
-lisinopril,amlodipine,hypertension
-amlodipine,lisinopril,hypertension
-albuterol,levalbuterol,asthma
-levalbuterol,albuterol,asthma
-omeprazole,pantoprazole,acid reflux
-pantoprazole,omeprazole,acid reflux
-sertraline,fluoxetine,depression
-fluoxetine,sertraline,depression
-warfarin,apixaban,blood clot
-apixaban,warfarin,blood clot
-losartan,valsartan,hypertension
-valsartan,losartan,hypertension
-gabapentin,pregabalin,nerve pain
-pregabalin,gabapentin,nerve pain
-prednisone,methylprednisolone,inflammation
-methylprednisolone,prednisone,inflammation
-furosemide,spironolactone,edema
-spironolactone,furosemide,edema
-hydrochlorothiazide,chlorthalidone,hypertension
-chlorthalidone,hydrochlorothiazide,hypertension
-diclofenac,naproxen,pain
+drug,alternative,condition,priority,avoid_if,reason
+ibuprofen,paracetamol,pain,first_line,liver disease,safer for kidney function and blood pressure
+diclofenac,paracetamol,pain,first_line,liver disease,safer for kidney function
+naproxen,paracetamol,pain,first_line,liver disease,lower cardiovascular risk than nsaids
+aspirin,clopidogrel,antiplatelet,first_line,bleeding,less gastrointestinal irritation
+clopidogrel,aspirin,antiplatelet,second_line,bleeding,used when dual therapy not required
+warfarin,apixaban,anticoagulation,first_line,kidney disease,lower bleeding risk and no inr monitoring
+warfarin,rivaroxaban,anticoagulation,first_line,kidney disease,fixed dosing and fewer interactions
+heparin,enoxaparin,anticoagulation,first_line,renal impairment,more predictable pharmacokinetics
+metformin,glipizide,diabetes,second_line,kidney disease,lower risk of lactic acidosis
+metformin,insulin,diabetes,reserve,kidney disease,safe in severe renal impairment
+glipizide,metformin,diabetes,first_line,severe hypoglycemia risk,improves insulin sensitivity
+lisinopril,amlodipine,hypertension,first_line,angioedema,different mechanism of action
+losartan,amlodipine,hypertension,first_line,renal artery stenosis,safer for kidney function in some cases
+amlodipine,losartan,hypertension,second_line,hyperkalemia,better blood pressure control combination
+metoprolol,amlodipine,hypertension,first_line,asthma,avoids bronchospasm risk
+furosemide,spironolactone,edema,second_line,kidney disease,potassium sparing effect
+spironolactone,furosemide,edema,first_line,hyperkalemia,strong diuretic effect
+hydrochlorothiazide,chlorthalidone,hypertension,first_line,gout,longer duration of action
+atorvastatin,pravastatin,cholesterol,second_line,liver disease,lower risk of myopathy
+simvastatin,rosuvastatin,cholesterol,second_line,liver disease,more potent ldl reduction
+rosuvastatin,atorvastatin,cholesterol,first_line,liver disease,strong lipid lowering effect
+amoxicillin,azithromycin,infection,first_line,penicillin allergy,safer for allergic patients
+azithromycin,doxycycline,infection,second_line,pregnancy,broader atypical coverage
+doxycycline,amoxicillin,infection,second_line,penicillin allergy,alternative for respiratory infections
+omeprazole,famotidine,acid reflux,first_line,chronic kidney disease,safer for long term kidney health
+pantoprazole,famotidine,acid reflux,first_line,kidney disease,lower interaction profile
+esomeprazole,ranitidine,acid reflux,second_line,renal impairment,reduced acid suppression duration
+albuterol,salmeterol,asthma,second_line,acute attack,long acting for maintenance
+salmeterol,formoterol,asthma,first_line,acute attack,long acting bronchodilator
+formoterol,budesonide,asthma,first_line,acute attack,combination therapy improves control
+gabapentin,pregabalin,nerve pain,first_line,kidney disease,better potency and absorption
+pregabalin,gabapentin,nerve pain,second_line,kidney disease,alternative dosing option
+amitriptyline,gabapentin,nerve pain,second_line,cardiac disease,dual benefit for depression
+sertraline,escitalopram,depression,first_line,qt prolongation,better tolerability
+fluoxetine,sertraline,depression,second_line,drug interactions,longer half life stability
+paroxetine,sertraline,depression,second_line,weight gain risk,lower metabolic effects
+citalopram,escitalopram,depression,first_line,qt prolongation,fewer cardiac effects
+escitalopram,sertraline,depression,first_line,gi intolerance,better tolerability
+levothyroxine,liothyronine,hypothyroidism,second_line,cardiac disease,faster onset but more risk
+clopidogrel,ticagrelor,antiplatelet,first_line,bleeding,more potent platelet inhibition
+insulin,metformin,diabetes,first_line,lactic acidosis risk,better glucose control
+insulin,glipizide,diabetes,second_line,hypoglycemia risk,alternative oral therapy
+losartan,valsartan,hypertension,first_line,renal artery stenosis,similar arb with flexibility
+metoprolol,bisoprolol,hypertension,first_line,asthma,more selective beta blocker
+bisoprolol,nebivolol,hypertension,second_line,bradycardia,better heart rate control
+nebivolol,amlodipine,hypertension,second_line,heart failure,vasodilation benefits
+spironolactone,eplerenone,edema,first_line,gynecomastia,less hormonal side effects
+pravastatin,rosuvastatin,cholesterol,first_line,liver disease,less hepatic metabolism
+amoxicillin,cephalexin,infection,second_line,penicillin allergy,cross-reactivity low
+cephalexin,azithromycin,infection,second_line,penicillin allergy,alternative coverage
+doxycycline,azithromycin,infection,first_line,pregnancy,better atypical coverage
+clarithromycin,azithromycin,infection,second_line,qt prolongation,less cardiac risk
+pantoprazole,omeprazole,acid reflux,first_line,drug interaction risk,lower cyp interaction
+rabeprazole,omeprazole,acid reflux,second_line,kidney disease,better tolerance
+ranitidine,famotidine,acid reflux,first_line,kidney disease,fewer interactions
+salbutamol,levalbuterol,asthma,first_line,tachycardia,less cardiac stimulation
+budesonide,fluticasone,asthma,first_line,oral thrush risk,better inhaled steroid
+pregabalin,duloxetine,nerve pain,second_line,liver disease,dual mechanism
+tramadol,paracetamol,pain,second_line,opioid dependence risk,lower abuse potential
+codeine,paracetamol,pain,second_line,respiratory depression,safer dosing
+morphine,fentanyl,pain,reserve,respiratory depression,high potency alternative
+diclofenac,naproxen,pain,second_line,cardiovascular risk,lower cv risk
+naproxen,ibuprofen,pain,first_line,gi bleeding risk,better safety profile
+ibuprofen,naproxen,pain,second_line,renal risk,longer duration relief
+aspirin,prasugrel,antiplatelet,second_line,bleeding,more potent alternative
+apixaban,dabigatran,anticoagulation,first_line,kidney disease,lower renal clearance
+rivaroxaban,apixaban,anticoagulation,first_line,renal impairment,better safety
+metformin,sitagliptin,diabetes,second_line,renal impairment,low hypoglycemia risk
+glimepiride,metformin,diabetes,first_line,weight gain risk,improves insulin sensitivity
+amlodipine,nifedipine,hypertension,second_line,edema,alternative calcium blocker
+losartan,irbesartan,hypertension,first_line,renal disease,better nephroprotection
+furosemide,torsemide,edema,first_line,renal impairment,longer duration
+spironolactone,amiloride,edema,second_line,hyperkalemia,alternative potassium sparing
+atorvastatin,ezetimibe,cholesterol,second_line,liver disease,non-statin alternative
+simvastatin,pravastatin,cholesterol,second_line,liver disease,safer metabolism
+enalapril,losartan,hypertension,first_line,hyperkalemia,alternative for acei cough
+ramipril,irbesartan,hypertension,first_line,renal failure,alternative arb
+ibuprofen,celecoxib,pain,second_line,sulfonamide allergy,lower gi risk than non-selective nsaids
+naproxen,celecoxib,pain,second_line,cardiac disease,cox-2 selective safety profile
+metformin,pioglitazone,diabetes,second_line,heart failure,alternative for renal impairment
+metformin,empagliflozin,diabetes,first_line,recurrent utis,cardiovascular and renal protection
+metformin,vildagliptin,diabetes,second_line,liver disease,dosing flexibility
+glipizide,sitagliptin,diabetes,second_line,renal impairment,safer weight profile
+warfarin,dabigatran,anticoagulation,first_line,mechanical heart valve,direct thrombin inhibitor
+warfarin,edoxaban,anticoagulation,first_line,high stroke risk,proven safety profile
+heparin,fondaparinux,anticoagulation,first_line,hit history,synthetic pentasaccharide
+propranolol,metoprolol,hypertension,first_line,asthma,beta-1 selectivity
+atenolol,bisoprolol,heart failure,first_line,bradycardia,cardioselective beta blocker
+paroxetine,escitalopram,anxiety,first_line,weight gain,cleaner side effect profile
+amitriptyline,nortriptyline,nerve pain,first_line,orthostatic hypotension,fewer anticholinergic effects
+haloperidol,quetiapine,psychosis,first_line,parkinsonism,lower risk of eps
+risperidone,olanzapine,schizophrenia,second_line,hyperprolactinemia,metabolic profile alternative
+olanzapine,aripiprazole,bipolar disorder,first_line,weight gain,weight neutral
+clozapine,quetiapine,psychosis,reserve,neutropenia,low propensity for agranulocytosis
+hydrochlorothiazide,indapamide,hypertension,first_line,recurrent stroke,metabolic neutrality
+atorvastatin,rosuvastatin,cholesterol,first_line,renal impairment,more potent ldl reduction
+amoxicillin,clarithromycin,infection,second_line,diarrhea,macrolide alternative
+ciprofloxacin,moxifloxacin,respiratory infection,first_line,renal impairment,better gram positive coverage
+doxycycline,minocycline,acne,second_line,sun sensitivity,alternative tetracycline
+gentamicin,amikacin,infection,reserve,gentamicin resistance,aminoglycoside reserve
+vancomycin,linezolid,mrsa infection,first_line,red man syndrome,alternative for bone and lung
+vancomycin,daptomycin,bacteremia,reserve,pneumonia,alternative for skin and blood
+prednisone,dexamethasone,inflammation,first_line,fluid retention,longer acting corticosteroid
+prednisone,methylprednisolone,asthma acute,first_line,gi side effects,less mineralocorticoid activity
+omeprazole,pantoprazole,gerd,first_line,clopidogrel use,minimal cyp6c19 inhibition
+lansoprazole,rabeprazole,peptic ulcer,first_line,poor response,faster acid suppression
+ondansetron,aprepitant,chemo nausea,first_line,delayed emesis,nk1 receptor antagonist
+ondansetron,metoclopramide,gastroparesis,second_line,qt prolongation,prokinetic effect
+sildenafil,tadalafil,erectile dysfunction,first_line,short duration,longer duration of action
+albuterol,ipratropium,copd,first_line,tachycardia,anticholinergic bronchodilator
+salmeterol,tiotropium,copd,first_line,asthma,long acting anticholinergic
+montelukast,zafirlukast,allergic rhinitis,second_line,pediatric use,leukotriene receptor blocker
+morphine,oxycodone,chronic pain,second_line,renal failure,better renal safety profile
+codeine,tramadol,moderate pain,first_line,poor metabolizer,dual mechanism of action
+diazepam,lorazepam,anxiety acute,first_line,elderly,shorter half-life
+diazepam,oxazepam,alcohol withdrawal,first_line,cirrhosis,glucuronidated only
+midazolam,propofol,sedation,first_line,airway compromise,shorter duration of action
+phenytoin,levetiracetam,seizures,first_line,gingival hyperplasia,cleaner interaction profile
+carbamazepine,oxcarbazepine,seizures,first_line,bone marrow suppression,fewer enzyme inductions
+valproate,topiramate,migraine prophylaxis,first_line,liver disease,weight loss profile
+valproate,lamotrigine,bipolar depression,first_line,alopecia,superior for depression phase
+lithium,valproate,mania,first_line,nephrogenic di,safer renal profile
+topiramate,zonisamide,seizures,second_line,cognitive slowing,alternative sulfonamide
+ciclosporin,tacrolimus,transplant rejection,first_line,hirsutism,more potent immunosuppression
+methotrexate,leflunomide,rheumatoid arthritis,first_line,pulmonary fibrosis,alternative dmard
+azathioprine,mycophenolate,lupus,first_line,bone marrow suppression,selective t-cell inhibition
+allopurinol,febuxostat,gout,first_line,renal impairment,selective xo inhibitor
+prednisone,hydrocortisone,adrenal insufficiency,reserve,fluid retention,physiological replacement
+glimepiride,linagliptin,diabetes,first_line,hypoglycemia,safer for renal function
+pioglitazone,rosiglitazone,diabetes,second_line,bladder cancer risk,similar tzd profile
+insulin_glargine,insulin_detemir,diabetes type 1,first_line,dosing twice daily,once daily basal insulin
+digoxin,bisoprolol,atrial fibrillation,first_line,heart failure,better rate control
+warfarin,enoxaparin,dvt prevention,first_line,inability to monitor inr,lmwh alternative
+ciprofloxacin,nitrofurantoin,cystitis,first_line,tendonitis risk,better safety for cystitis
+metronidazole,vancomycin_oral,c. diff infection,first_line,severe infection,site specific coverage
+doxycycline,amoxicillin_clavulanate,sinusitis,first_line,staining of teeth,beta-lactamase inhibitor
+tobramycin,amikacin,pseudomonas infection,reserve,resistance,extended spectrum
+fluconazole,voriconazole,aspergillosis,first_line,limited spectrum,triazole for mold
+caspofungin,amphotericin_b,candidaemia,first_line,nephrotoxicity,echinocandin safety
+aciclovir,valaciclovir,herpes zoster,first_line,frequent dosing,superior bioavailability
+tenofovir,entecavir,hepatitis b,first_line,renal toxicity,superior resistance profile
+loperamide,bismuth,diarrhea,first_line,infection suspected,anti-secretory effect
+sennosides,macrogol,constipation,first_line,laxative abuse,osmotic mechanism
+bisacodyl,lactulose,constipation,first_line,cramping,non-stimulant alternative
+iron_sulfate,iron_fumarate,anemia,first_line,constipation,alternative iron salt
+folic_acid,leucovorin,methotrexate rescue,reserve,severe toxicity,active folate
+paracetamol,ketamine,trauma pain,reserve,respiratory depression,nmda antagonist
+morphine,pethidine,biliary colic,reserve,sphincter of oddi spasm,alternative for labor
+tramadol,tapentadol,neuropathic pain,first_line,nausea,similar dual mechanism
+amitriptyline,duloxetine,fibromyalgia,first_line,anticholinergic effects,snri alternative
+sumatriptan,rizatriptan,migraine,first_line,slow onset,faster disintegrating tablet
+ergotamine,sumatriptan,migraine clusters,first_line,vasoconstriction,selective serotonin agonist
+prochlorperazine,cyclizine,vertigo,first_line,eps risk,antihistamine alternative
+atropine,glycopyrrolate,sialorrhea,first_line,tachycardia,quaternary ammonium safety
+pilocarpine,timolol,glaucoma,first_line,miosis,beta blocker for eyes
+latanoprost,timolol,glaucoma,first_line,iris pigmentation,prostaglandin analog
+salmeterol,indacaterol,copd,first_line,twice daily dosing,ultra long acting laba
+prednisone,ciclosporin,nephrotic syndrome,reserve,steroid resistance,calcineurin inhibitor
+lisinopril,valsartan,hypertension,first_line,pregnancy,avoids bradykinin cough
+metformin,sitagliptin,diabetes,second_line,pancreatitis,low hypoglycemia risk
+warfarin,apixaban,anticoagulation,first_line,severe renal impairment,superior safety in elderly
+warfarin,rivaroxaban,anticoagulation,first_line,gi ulcer,once daily convenience
+fluoxetine,sertraline,depression,first_line,insomnia,shorter half-life
+citalopram,escitalopram,depression,first_line,cardiac conduction issues,identical s-isomer
+furosemide,torsemide,edema,first_line,poor absorption,better oral bioavailability
+spironolactone,eplerenone,heart failure,first_line,gynecomastia,selective aldosterone blockade
+simvastatin,pravastatin,cholesterol,first_line,liver disease,fewer cyp interactions
+ranitidine,famotidine,dyspepsia,first_line,renal adjustment,h2 blocker alternative
+fluticasone,budesonide,asthma maintenance,first_line,local irritation,inhaled steroid alternative
+morphine,fentanyl,severe pain,reserve,morphine allergy,synthetic opioid alternative
+gabapentin,pregabalin,postherpetic neuralgia,first_line,frequent dosing,linear pharmacokinetics
+levothyroxine,liothyronine,hypothyroidism,reserve,t4/t3 conversion issues,active thyroid hormone
+clopidogrel,ticagrelor,acs,first_line,aspirin resistance,reversible binding
+amoxicillin,cephalexin,uti,first_line,penicillin resistance,first gen cephalosporin
+clarithromycin,azithromycin,cap,first_line,gi intolerance,better gastric profile
+celecoxib,etoricoxib,pain,second_line,cardiac failure,similar gi safety profile
+meloxicam,naproxen,arthritis,first_line,gi history,better safety for chronic use
+sitagliptin,linagliptin,diabetes,first_line,renal impairment,no renal adjustment needed
+empagliflozin,dapagliflozin,diabetes,first_line,hypotension,sglt2 alternative
+vildagliptin,sitagliptin,diabetes,second_line,liver disease,proven safety profile
+apixaban,rivaroxaban,anticoagulation,first_line,multiple daily dosing issue,once daily alternative
+dabigatran,apixaban,anticoagulation,first_line,gi intolerance,better gi safety
+atenolol,metoprolol,hypertension,first_line,renal failure,better liver metabolism
+bisoprolol,carvedilol,heart failure,first_line,bradycardia,alpha-1 blockade benefits
+glimepiride,glipizide,diabetes,first_line,renal impairment,shorter acting for safety
+quetiapine,olanzapine,psychosis,second_line,sedation issues,similar efficacy profile
+risperidone,aripiprazole,bipolar disorder,first_line,weight gain,weight neutral alternative

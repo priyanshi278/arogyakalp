@@ -1,10 +1,8 @@
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import List, Optional, Dict
 from transformers import pipeline
 
 # Load pretrained biomedical NER pipeline once
-# model: d4data/biomedical-ner-all
-# It handles entities like DISEASE, CHEMICAL, DRUG, etc.
 ner_pipeline = pipeline(
     "ner", 
     model="d4data/biomedical-ner-all", 
@@ -14,27 +12,33 @@ ner_pipeline = pipeline(
 class NERRequest(BaseModel):
     text: str
 
-class DrugEntity(BaseModel):
-    original: str
-    generic: str
-
-class ADRPrediction(BaseModel):
+class RecommendationDict(BaseModel):
+    decision: str
     drug: str
-    side_effects: List[str]
-
-class DrugInteraction(BaseModel):
-    drug_pair: List[str]
-    interaction: str
-
-class Recommendation(BaseModel):
-    drug: str
-    issue: str
     alternative: str
+    reason: str
+    monitoring: str
 
-class NERResponse(BaseModel):
-    drugs: List[DrugEntity]
-    diseases: List[str]
-    allergies: List[str]
-    adr_predictions: List[ADRPrediction] = []
-    drug_interactions: List[DrugInteraction] = []
-    recommendations: List[Recommendation] = []
+class AnalysisDict(BaseModel):
+    mechanism: str
+    impact: str
+    risk_factors: str
+    outcome: str
+
+class CDSSDDI(BaseModel):
+    drug_a: str
+    drug_b: str
+    severity: str
+    meaning: str
+
+class CDSSADR(BaseModel):
+    drug: str
+    effects: List[str]
+
+class CDSSResponse(BaseModel):
+    risk_level: str
+    alerts: List[str]
+    recommendation: RecommendationDict
+    analysis: AnalysisDict
+    ddi: List[CDSSDDI]
+    adr: List[CDSSADR]

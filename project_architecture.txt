@@ -1,0 +1,83 @@
+=============================================================
+AROGYAKALP CDSS - PROJECT ARCHITECTURE & FILE FLOW
+=============================================================
+
+This document outlines the file structure, core responsibilities of each module, and the operational data flow of the Arogyakalp Clinical Decision Support System (CDSS).
+
+-------------------------------------------------------------
+1. DIRECTORY STRUCTURE & FILE DESCRIPTIONS
+-------------------------------------------------------------
+
+[BACKEND: FASTAPI] (/app)
+-------------------------
+The backend serves as the deterministic clinical engine. It exposes API routes, strictly processes clinical data, and relies on a "knowledge-based expert rule engine" to assess pharmacological risk safely.
+
+► /app/main.py
+   - The central entry point for the FastAPI server.
+   - Bootstraps the application, mounts CORS middleware, and includes the routers (such as NER and Chat).
+
+► /app/api/
+   - routes.py: Houses the primary `/extract_entities` endpoint. Triggers the core NER extraction and clinical risk generation pipeline.
+   - chatbot_routes.py: Houses the `/chat` endpoint. Takes the outputted JSON from the CDSS engine and formats it into the 4-tier Clinical Explanation (Mechanism, Impact, Risk Factors, Outcome).
+
+► /app/models/
+   - ner_model.py: Defines the strict Pydantic schemas (e.g., `CDSSResponse`, `CDSSDDI`). Enforces the shape of the data returned to the frontend to guarantee zero contradictions.
+   - clinical_models.py: Secondary schemas for reasoning requests/responses.
+
+► /app/services/
+   - ner_service.py: The overarching "Orchestrator". Preprocesses text, calls the NLP pipeline (HuggingFace) to extract entities (Drugs, Diseases), and passes them to the other services to compile the final unified `CDSSResponse`. Calculates the deterministic Risk Levels and Monitoring strings.
+   - ddi_service.py: The Drug-Drug Interaction (DDI) engine. Analyzes drug combinations against datasets and dynamic class-based mappings to formulate explicit pharmacological mechanisms (e.g., "CYP metabolism inhibition").
+   - adr_service.py: Evaluates raw medications and returns normalized Adverse Drug Reactions (ADRs) while preventing outlier exaggerations via rules.
+   - recommendation_service.py: Queries alternative datasets if a dangerous interaction is detected. Formulates safer "Recommended Alternatives" based on patient comorbidities.
+
+► /app/utils/
+   - drug_mapper.py: A utility dictionary that maps explicit generic drug strings to their overarching classes (e.g., matching "ibuprofen" to "nsaid") to allow dynamic DDI algorithmic processing.
+   - preprocessing.py: Cleans raw textual data before it hits the NLP pipeline.
+
+
+[FRONTEND: REACT + VITE] (/frontend/src)
+----------------------------------------
+The presentation layer. It takes the strict JSON provided by the backend and renders it into a high-fidelity, EMR-style clinical dashboard.
+
+► /frontend/src/App.jsx
+   - The main React application container. Manages the dual-state UI (Input screen vs Split-panel Results dashboard) and handles the FETCH requests to the FastAPI backend.
+
+► /frontend/src/index.css
+   - The central stylesheet. Employs a dense, clinical design system devoid of gradients or superficial styling, enforcing "Risk Level" color coding natively.
+
+► /frontend/src/components/
+   - InputSection.jsx: The centralized clinical text entry form.
+   - Results.jsx: The overarching right-panel dashboard. It dynamically decodes the `CDSSResponse` to render Risk Banners, Alerts, and embedded cards.
+   
+► /frontend/src/components/cards/
+   - RecommendationCard.jsx: Renders the primary decision label (✅, ⚠️, ❌), monitoring advice, and alternatives explicitly.
+   - ADRCard.jsx: Renders predicted side-effects grouped by drug.
+
+
+-------------------------------------------------------------
+2. OPERATIONAL FILE FLOW (How the system executes)
+-------------------------------------------------------------
+
+STEP 1: USER INPUT (Frontend)
+User types clinical notes into the UI (`InputSection.jsx`) and submits. `App.jsx` intercepts this and fires an HTTP POST request to `/api/extract_entities`.
+
+STEP 2: API ROUTING (Backend)
+FastAPI receives the request via `app/api/routes.py` and forwards the raw text directly down into the `NERService`.
+
+STEP 3: EXTRACTION & NORMALIZATION (`ner_service.py`)
+`ner_service.py` runs the text through an NLP pipeline to identify specific entities (e.g., "Age", "Warfarin", "Kidney Disease"). It maps terms like "bp" safely to "Hypertension" using internal logic.
+
+STEP 4: RISK EVALUATION (`ddi_service.py` & `adr_service.py`)
+`ner_service.py` passes the extracted drugs to `ddi_service.py`. The DDI service utilizes `drug_mapper.py` to identify classes and dynamically calculates the exact pharmacological mechanism if danger exists. Concurrently, `adr_service.py` calculates expected side effects.
+
+STEP 5: RECOMMENDATION ROUTING (`recommendation_service.py`)
+If the DDI engine reports "HIGH" or "DANGEROUS" risk, `ner_service.py` asks `recommendation_service.py` for a safer medication alternative that does not violate the patient's existing diseases.
+
+STEP 6: UNIFIED JSON PACKAGING (`ner_model.py`)
+`ner_service.py` takes all the compiled rules, alerts, and formatting strings, packages them perfectly into the `CDSSResponse` schema (defined in `ner_model.py`), and returns the JSON payload.
+
+STEP 7: EXPLANATION LAYER (`chatbot_routes.py`)
+The frontend takes the JSON payload and sends it to the secondary `/api/chat` route. The chatbot route parses the JSON and builds a safe, non-contradictory 4-tier Clinical Explanation summarizing the mechanism.
+
+STEP 8: UI RENDERING (Frontend)
+`App.jsx` transitions the layout into dashboard mode. `Results.jsx` receives the JSON and parses the variables into the Risk Alert banner, the Recommendation panel, the Explanation block, the DDI Mechanism Table, and ADR cards—delivering a hospital-grade visual output.

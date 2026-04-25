@@ -1,0 +1,222 @@
+{
+  "warfarin": [
+    [
+      "INTERNATIONAL NORMALISED RATIO INCREASED",
+      10374
+    ],
+    [
+      "DYSPNOEA",
+      8469
+    ],
+    [
+      "DRUG INTERACTION",
+      6313
+    ],
+    [
+      "FATIGUE",
+      6208
+    ],
+    [
+      "NAUSEA",
+      5975
+    ]
+  ],
+  "ibuprofen": [
+    [
+      "DRUG INEFFECTIVE",
+      26765
+    ],
+    [
+      "PAIN",
+      19080
+    ],
+    [
+      "FATIGUE",
+      18214
+    ],
+    [
+      "NAUSEA",
+      17698
+    ],
+    [
+      "HEADACHE",
+      16126
+    ]
+  ],
+  "metformin": [
+    [
+      "NAUSEA",
+      29225
+    ],
+    [
+      "BLOOD GLUCOSE INCREASED",
+      27331
+    ],
+    [
+      "DIARRHOEA",
+      27196
+    ],
+    [
+      "DRUG INEFFECTIVE",
+      22103
+    ],
+    [
+      "FATIGUE",
+      20850
+    ]
+  ],
+  "atorvastatin": [
+    [
+      "FATIGUE",
+      13961
+    ],
+    [
+      "DRUG INEFFECTIVE",
+      13023
+    ],
+    [
+      "NAUSEA",
+      12577
+    ],
+    [
+      "TYPE 2 DIABETES MELLITUS",
+      11265
+    ],
+    [
+      "DYSPNOEA",
+      11153
+    ]
+  ],
+  "aspirin": [
+    [
+      "FATIGUE",
+      32883
+    ],
+    [
+      "NAUSEA",
+      27988
+    ],
+    [
+      "DYSPNOEA",
+      27806
+    ],
+    [
+      "DIARRHOEA",
+      27120
+    ],
+    [
+      "DRUG INEFFECTIVE",
+      26122
+    ]
+  ],
+  "lisinopril": [
+    [
+      "FATIGUE",
+      19926
+    ],
+    [
+      "NAUSEA",
+      18607
+    ],
+    [
+      "DRUG INEFFECTIVE",
+      17693
+    ],
+    [
+      "DIARRHOEA",
+      17300
+    ],
+    [
+      "DYSPNOEA",
+      14031
+    ]
+  ],
+  "metoprolol": [
+    [
+      "FATIGUE",
+      22536
+    ],
+    [
+      "DYSPNOEA",
+      19524
+    ],
+    [
+      "DIARRHOEA",
+      19150
+    ],
+    [
+      "NAUSEA",
+      18955
+    ],
+    [
+      "DRUG INEFFECTIVE",
+      17046
+    ]
+  ],
+  "clopidogrel": [
+    [
+      "DYSPNOEA",
+      10660
+    ],
+    [
+      "MYOCARDIAL INFARCTION",
+      10147
+    ],
+    [
+      "FATIGUE",
+      9171
+    ],
+    [
+      "GASTROINTESTINAL HAEMORRHAGE",
+      8669
+    ],
+    [
+      "NAUSEA",
+      8463
+    ]
+  ],
+  "sertraline": [
+    [
+      "NAUSEA",
+      13398
+    ],
+    [
+      "DRUG INEFFECTIVE",
+      13247
+    ],
+    [
+      "FATIGUE",
+      12441
+    ],
+    [
+      "HEADACHE",
+      10800
+    ],
+    [
+      "ANXIETY",
+      10072
+    ]
+  ],
+  "amoxicillin": [
+    [
+      "DIARRHOEA",
+      5822
+    ],
+    [
+      "DRUG HYPERSENSITIVITY",
+      5410
+    ],
+    [
+      "NAUSEA",
+      5017
+    ],
+    [
+      "CHRONIC KIDNEY DISEASE",
+      4929
+    ],
+    [
+      "ACUTE KIDNEY INJURY",
+      4898
+    ]
+  ]
+}

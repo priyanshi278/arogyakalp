@@ -6,3 +6,5 @@ torch
 sentencepiece
 pandas
 scikit-learn
+xgboost
+requests

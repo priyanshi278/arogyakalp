@@ -3,6 +3,7 @@ import os
 from typing import List, Dict, Tuple, Optional
 from itertools import combinations
 from app.utils.drug_mapper import get_drug_class
+from app.utils.xgboost_risk_model import xgb_risk_model  # XGBoost secondary validator
 
 RISK_LEVELS = {3: "DANGEROUS", 2: "HIGH", 1: "MODERATE", 0: "LOW"}
 
@@ -111,7 +112,13 @@ class DDIService:
         adj, res_list = self.adjust_for_patient(new_drug_lower, patient_status)
         max_score = max(max_score, adj)
         reasons.extend(res_list)
-        
+
+        # XGBoost secondary validation — cross-checks rule engine score
+        xgb_score = xgb_risk_model.predict_risk(get_drug_class(new_drug_lower),
+                                                 get_drug_class(processed_current[0]) if processed_current else None)
+        if xgb_score is not None and xgb_score > max_score:
+            max_score = min(xgb_score, max_score + 1)  # escalate by at most 1 level
+
         if age and age > 60:
             if max_score > 0 and max_score < 3:
                 max_score += 1

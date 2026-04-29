@@ -19,8 +19,9 @@ const RecommendationCard = ({ rec }) => {
           borderLeft: `4px solid ${headerColor}`,
           padding: '1.25rem',
           background: headerBg,
-          borderRadius: '0 8px 8px 0',
-          marginBottom: '1rem'
+          borderRadius: '8px',
+          marginBottom: '1rem',
+          boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)'
         }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
             <div>
@@ -39,9 +40,17 @@ const RecommendationCard = ({ rec }) => {
         </div>
 
         {rec.alternative && rec.alternative !== "N/A" && (
-            <div style={{ marginLeft: '1rem', padding: '1rem', borderTop: '1px solid #E2E8F0', background: '#F8FAFC', borderRadius: '4px' }}>
-                <strong style={{ fontSize: '0.85rem', color: 'var(--medical-indigo)', textTransform: 'uppercase' }}>✅ Recommended Alternative:</strong>
-                <p style={{ fontSize: '0.95rem', fontWeight: 600, marginTop: '0.25rem', color: '#0F172A' }}>{rec.alternative}</p>
+            <div style={{ 
+              borderLeft: '4px solid var(--success)', 
+              padding: '1.25rem', 
+              background: 'var(--success-soft)', 
+              borderRadius: '8px',
+              boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)'
+            }}>
+                <strong style={{ fontSize: '0.9rem', color: 'var(--success)', textTransform: 'uppercase', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <span>✅</span> RECOMMENDED ALTERNATIVE:
+                </strong>
+                <p style={{ fontSize: '1.1rem', fontWeight: 700, marginTop: '0.5rem', color: '#0F172A' }}>{rec.alternative}</p>
             </div>
         )}
     </div>

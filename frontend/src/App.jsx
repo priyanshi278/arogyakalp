@@ -143,8 +143,8 @@ function App() {
           )}
       </div>
 
-      <footer style={{ marginTop: 'auto', textAlign: 'center', padding: '2rem 2rem 1rem', color: '#94a3b8', fontSize: '0.75rem', letterSpacing: '1px' }}>
-        &copy; 2026 AROGYAKALP AI CLINICAL SYSTEMS • ENCRYPTED MEDICAL SESSION • VERSION 3.2.0 CDSS
+      <footer style={{ marginTop: 'auto', textAlign: 'center', padding: '0.5rem', color: '#94a3b8', fontSize: '0.7rem', letterSpacing: '1px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+        &copy; 2026 AROGYAKALP AI CLINICAL SYSTEMS
       </footer>
     </div>
   );

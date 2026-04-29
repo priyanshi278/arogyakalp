@@ -20,7 +20,8 @@
   --info-soft: #dbeafe;
 
   /* Elevation */
-  --shadow-premium: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-premium: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --radius-premium: 8px;
   --transition: all 0.2s ease-in-out;
 }
@@ -35,14 +36,16 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: var(--medical-bg);
   color: var(--medical-slate);
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
 #root {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 /* Typography Settings */
@@ -57,6 +60,7 @@ h1, h2, h3, .brand-font {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 /* Glass Card Baseline (now solid EMR style) */
@@ -69,7 +73,7 @@ h1, h2, h3, .brand-font {
 }
 
 .glass-panel:hover {
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-hover);
 }
 
 /* Medical Header Layout */
@@ -80,8 +84,9 @@ h1, h2, h3, .brand-font {
   padding: 1rem 2rem;
   background: var(--medical-slate);
   color: white;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   border-radius: var(--radius-premium);
+  flex-shrink: 0;
 }
 
 .brand {
@@ -140,10 +145,11 @@ h1, h2, h3, .brand-font {
 /* Grids */
 .main-grid {
   display: grid;
-  grid-template-columns: 30% 1fr;
+  grid-template-columns: 350px 1fr;
   gap: 1.5rem;
   flex: 1;
   overflow: hidden;
+  min-height: 0;
 }
 
 .center-grid {
@@ -162,6 +168,7 @@ h1, h2, h3, .brand-font {
 .left-panel {
   overflow-y: auto;
   height: 100%;
+  padding-right: 0.5rem;
 }
 
 .right-panel {
@@ -180,7 +187,7 @@ h1, h2, h3, .brand-font {
 /* Section Styling */
 .section-card {
   padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .section-head {
@@ -240,7 +247,7 @@ h1, h2, h3, .brand-font {
   border-radius: 8px;
   font-weight: 800;
   font-size: 1.1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   box-shadow: var(--shadow-premium);
 }
 

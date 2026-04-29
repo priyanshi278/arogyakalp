@@ -22,17 +22,9 @@ const Results = ({ data, chatResponse, isLoading }) => {
   else if (riskLevel === 'MODERATE') confidence = 'Moderate (Rule-based estimate)';
 
   return (
-    <div className="fade-in" style={{ display: 'grid', gap: '1.5rem', marginTop: '1rem' }}>
+    <div className="fade-in" style={{ display: 'grid', gap: '1rem', marginTop: '1rem' }}>
       
-      {/* Credibility Layer */}
-      <div style={{ display: 'flex', gap: '1rem', marginBottom: '-0.5rem' }}>
-         <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--medical-slate-muted)', background: '#E2E8F0', padding: '0.2rem 0.6rem', borderRadius: '4px' }}>
-            Evidence Level: Prototype dataset (Not Clinically Validated)
-         </span>
-         <span style={{ fontSize: '0.75rem', fontWeight: 600, color: 'var(--medical-indigo)', background: '#E0E7FF', padding: '0.2rem 0.6rem', borderRadius: '4px' }}>
-            Interaction Confidence: {confidence}
-         </span>
-      </div>
+
 
       {/* Risk Summary Card */}
       <div className="glass-panel section-card" style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
